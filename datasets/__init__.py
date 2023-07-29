@@ -14,10 +14,11 @@ from datasets.bair import BAIRDataset
 from datasets.kth import KTHDataset
 from datasets.cityscapes import CityscapesDataset
 from datasets.ucf101 import UCF101Dataset
+from datasets.youtube_data import YoutubeVideoDataset
 from torch.utils.data import Subset
 
 
-DATASETS = ['CIFAR10', 'CELEBA', 'LSUN', 'FFHQ', 'IMAGENET', 'MOVINGMNIST', 'STOCHASTICMOVINGMNIST', 'BAIR', 'KTH', 'CITYSCAPES', 'UCF101']
+DATASETS = ['CIFAR10', 'CELEBA', 'LSUN', 'FFHQ', 'IMAGENET', 'MOVINGMNIST', 'STOCHASTICMOVINGMNIST', 'BAIR', 'KTH', 'CITYSCAPES', 'UCF101', 'YOUTUBEVIDEO']
 
 
 def get_dataloaders(data_path, config):
@@ -205,6 +206,15 @@ def get_dataset(data_path, config, video_frames_pred=0, start_at=0):
         test_dataset = CityscapesDataset(os.path.join(data_path, "test"), frames_per_sample=frames_per_sample, random_time=True,
                                          random_horizontal_flip=False, color_jitter=0.0, total_videos=256)
 
+    elif config.data.dataset.upper() == "YOUTUBEVIDEO":
+        # Youtube Driving Dataset
+        # |-- drive
+        # |    |-- video name folder 
+        frames_per_sample = config.data.num_frames_cond + getattr(config.data, "num_frames_future", 0) + video_frames_pred
+        # train and test split has yet to be done here -- set them to be exactly the same for now
+        dataset = YoutubeVideoDataset(data_path, frames_per_sample=frames_per_sample, random_horizontal_flip=config.data.random_flip, color_jitter=getattr(config.data, 'color_jitter', 0.0))
+        test_dataset = YoutubeVideoDataset(data_path, frames_per_sample=frames_per_sample, random_horizontal_flip=config.data.random_flip, color_jitter=getattr(config.data, 'color_jitter', 0.0))
+
     elif config.data.dataset.upper() == "UCF101":
         # UCF101_h5 (data_path)
         # |-- shard_0001.hdf5
@@ -231,7 +241,7 @@ def logit_transform(image, lam=1e-6):
     image = lam + (1 - 2 * lam) * image
     return torch.log(image) - torch.log1p(-image)
 
-
+# Functional assume the image height / width given in the config files matches the actual dataset item
 def data_transform(config, X):
     if config.data.uniform_dequantization:
         X = X / 256. * 255. + torch.rand_like(X) / 256.

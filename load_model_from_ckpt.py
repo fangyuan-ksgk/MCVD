@@ -98,7 +98,10 @@ def init_samples(n_init_samples, config):
     # Initial samples
     # n_init_samples = min(36, config.training.batch_size)
     version = getattr(config.model, 'version', "DDPM")
-    init_samples_shape = (n_init_samples, config.data.channels*config.data.num_frames, config.data.image_size, config.data.image_size)
+    if config.data.image_height and config.data.image_width:
+        init_samples_shape = (n_init_samples, config.data.channels*config.data.num_frames, config.data.image_height, config.data.image_width)
+    else:
+        init_samples_shape = (n_init_samples, config.data.channels*config.data.num_frames, config.data.image_size, config.data.image_size)
     if version == "SMLD":
         init_samples = torch.rand(init_samples_shape)
         init_samples = data_transform(self.config, init_samples)

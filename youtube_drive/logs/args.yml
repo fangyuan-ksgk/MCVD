@@ -1,0 +1,33 @@
+ckpt: null
+command: python main.py --config configs/youtube_drive.yml --data_path D:/Implementation/VD/data/drive
+  --exp youtube_drive --ni
+comment: ''
+config: configs/youtube_drive.yml
+config_mod: []
+data_path: D:/Implementation/VD/data/drive
+end_ckpt: null
+exp: youtube_drive
+fast_fid: false
+feats_dir: D:\Implementation\VD\mcvd-pytorch\datasets
+fid_batch_size: 1000
+fid_num_samples: null
+final_only: null
+freq: null
+image_folder: images
+interact: false
+log_path: youtube_drive\logs
+ni: true
+no_ema: false
+no_pr: false
+pr_nn_k: null
+resume_training: false
+sample: false
+seed: 1234
+start_at: 0
+stats_dir: D:\Implementation\VD\mcvd-pytorch\datasets
+stats_download: false
+subsample: null
+test: false
+verbose: info
+video_folder: videos
+video_gen: false

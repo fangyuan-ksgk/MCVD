@@ -1,0 +1,1 @@
+youtube-download-cli "https://www.youtube.com/watch?v=Fd_3EkGr0-4" mp4 -o "/Users/leo/Downloads"

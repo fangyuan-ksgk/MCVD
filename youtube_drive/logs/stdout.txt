@@ -1,0 +1,500 @@
+INFO - main.py - 2023-07-28 14:47:11,634 - Using device: cuda
+INFO - main.py - 2023-07-28 14:47:11,636 - Namespace(ckpt=None, command='python main.py --config configs/youtube_drive.yml --data_path D:/Implementation/VD/data/drive --exp youtube_drive --ni', comment='', config='configs/youtube_drive.yml', config_mod=[], data_path='D:/Implementation/VD/data/drive', end_ckpt=None, exp='youtube_drive', fast_fid=False, feats_dir='D:\\Implementation\\VD\\mcvd-pytorch\\datasets', fid_batch_size=1000, fid_num_samples=None, final_only=None, freq=None, image_folder='images', interact=False, log_path='youtube_drive\\logs', ni=True, no_ema=False, no_pr=False, pr_nn_k=None, resume_training=False, sample=False, seed=1234, start_at=0, stats_dir='D:\\Implementation\\VD\\mcvd-pytorch\\datasets', stats_download=False, subsample=None, test=False, verbose='info', video_folder='videos', video_gen=False)
+INFO - main.py - 2023-07-28 14:47:11,637 - Writing log file to youtube_drive\logs
+INFO - main.py - 2023-07-28 14:47:11,637 - Exp instance id = 22000
+INFO - main.py - 2023-07-28 14:47:11,639 - Exp comment = 
+INFO - main.py - 2023-07-28 14:47:11,639 - Config =
+INFO - main.py - 2023-07-28 14:47:11,702 - Args =
+INFO - ncsn_runner.py - 2023-07-28 14:47:13,712 - Number of parameters: 4120326
+INFO - ncsn_runner.py - 2023-07-28 14:47:13,713 - Number of trainable parameters: 4120326
+INFO - ncsn_runner.py - 2023-07-28 14:47:13,714 - Number of GPUs : 1
+INFO - ncsn_runner.py - 2023-07-28 14:47:13,714 - _CudaDeviceProperties(name='NVIDIA GeForce RTX 3080', major=8, minor=6, total_memory=10239MB, multi_processor_count=68)
+INFO - ncsn_runner.py - 2023-07-28 14:47:21,667 - elapsed: 0:00:07.510, train time: 0.0020, mem: 3.383GB, GPUmem: 2.487GB, step: 1, lr: 0.000000, grad: 115091.4453, loss: 153735.8281
+INFO - ncsn_runner.py - 2023-07-28 14:47:22,780 - elapsed: 0:00:08.623, step: 1, mem: 3.402GB, GPUmem: 4.133GB, test_loss: 153448.5781
+INFO - ncsn_runner.py - 2023-07-28 14:49:07,144 - elapsed: 0:01:52.986, train time: 0.0103, mem: 4.325GB, GPUmem: 10.000GB, step: 100, lr: 0.000002, grad: 120836.4844, loss: 153286.1875
+INFO - ncsn_runner.py - 2023-07-28 14:51:37,935 - elapsed: 0:04:23.778, train time: 0.0314, mem: 4.234GB, GPUmem: 10.000GB, step: 200, lr: 0.000004, grad: 120469.4297, loss: 151954.5625
+INFO - ncsn_runner.py - 2023-07-28 14:53:42,134 - elapsed: 0:06:27.977, train time: 0.0442, mem: 4.185GB, GPUmem: 10.000GB, step: 300, lr: 0.000006, grad: 132250.7031, loss: 149516.3750
+INFO - ncsn_runner.py - 2023-07-28 14:55:51,042 - elapsed: 0:08:36.884, train time: 0.0581, mem: 4.229GB, GPUmem: 10.000GB, step: 400, lr: 0.000008, grad: 126995.2500, loss: 145566.1250
+INFO - ncsn_runner.py - 2023-07-28 14:57:44,807 - elapsed: 0:10:30.650, train time: 0.0684, mem: 4.234GB, GPUmem: 10.000GB, step: 500, lr: 0.000010, grad: 132897.9219, loss: 139355.2031
+INFO - ncsn_runner.py - 2023-07-28 14:59:28,796 - elapsed: 0:12:14.638, train time: 0.0758, mem: 4.207GB, GPUmem: 10.000GB, step: 600, lr: 0.000012, grad: 126129.0469, loss: 131801.6875
+INFO - ncsn_runner.py - 2023-07-28 15:01:14,171 - elapsed: 0:14:00.014, train time: 0.0832, mem: 4.168GB, GPUmem: 10.000GB, step: 700, lr: 0.000014, grad: 107676.5469, loss: 126647.1328
+INFO - ncsn_runner.py - 2023-07-28 15:02:55,937 - elapsed: 0:15:41.778, train time: 0.0906, mem: 4.158GB, GPUmem: 10.000GB, step: 800, lr: 0.000016, grad: 115038.8438, loss: 113826.9688
+INFO - ncsn_runner.py - 2023-07-28 15:04:36,035 - elapsed: 0:17:21.878, train time: 0.0981, mem: 4.038GB, GPUmem: 10.000GB, step: 900, lr: 0.000018, grad: 109260.2578, loss: 105501.6562
+INFO - ncsn_runner.py - 2023-07-28 15:06:17,956 - elapsed: 0:19:03.798, train time: 0.1054, mem: 4.038GB, GPUmem: 10.000GB, step: 1000, lr: 0.000020, grad: 103223.3203, loss: 98959.1094
+INFO - ncsn_runner.py - 2023-07-28 15:06:17,992 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 15:06:19,565 - elapsed: 0:19:05.408, step: 1000, mem: 4.045GB, GPUmem: 10.000GB, test_loss: 140222.1562
+INFO - ncsn_runner.py - 2023-07-28 15:08:03,132 - elapsed: 0:20:48.975, train time: 0.1129, mem: 4.045GB, GPUmem: 10.000GB, step: 1100, lr: 0.000022, grad: 101827.4297, loss: 83791.1172
+INFO - ncsn_runner.py - 2023-07-28 15:09:44,248 - elapsed: 0:22:30.091, train time: 0.1202, mem: 4.047GB, GPUmem: 10.000GB, step: 1200, lr: 0.000024, grad: 127033.6719, loss: 76948.4688
+INFO - ncsn_runner.py - 2023-07-28 15:11:51,816 - elapsed: 0:24:37.659, train time: 0.1354, mem: 3.994GB, GPUmem: 10.000GB, step: 1300, lr: 0.000026, grad: 91121.4375, loss: 62560.0391
+INFO - ncsn_runner.py - 2023-07-28 15:13:57,949 - elapsed: 0:26:43.792, train time: 0.1508, mem: 3.997GB, GPUmem: 10.000GB, step: 1400, lr: 0.000028, grad: 126493.6328, loss: 55938.3516
+INFO - ncsn_runner.py - 2023-07-28 15:15:46,654 - elapsed: 0:28:32.497, train time: 0.1604, mem: 3.962GB, GPUmem: 10.000GB, step: 1500, lr: 0.000030, grad: 107707.0391, loss: 48908.0469
+INFO - ncsn_runner.py - 2023-07-28 15:18:04,606 - elapsed: 0:30:50.448, train time: 0.1795, mem: 3.976GB, GPUmem: 10.000GB, step: 1600, lr: 0.000032, grad: 99325.0234, loss: 39286.1523
+INFO - ncsn_runner.py - 2023-07-28 15:19:47,993 - elapsed: 0:32:33.835, train time: 0.1870, mem: 3.959GB, GPUmem: 10.000GB, step: 1700, lr: 0.000034, grad: 92009.3359, loss: 30951.9043
+INFO - ncsn_runner.py - 2023-07-28 15:21:31,974 - elapsed: 0:34:17.817, train time: 0.1945, mem: 3.779GB, GPUmem: 10.000GB, step: 1800, lr: 0.000036, grad: 59636.6562, loss: 24552.8926
+INFO - ncsn_runner.py - 2023-07-28 15:23:14,511 - elapsed: 0:36:00.354, train time: 0.2019, mem: 3.779GB, GPUmem: 10.000GB, step: 1900, lr: 0.000038, grad: 67106.1562, loss: 19904.3809
+INFO - ncsn_runner.py - 2023-07-28 15:24:56,410 - elapsed: 0:37:42.253, train time: 0.2093, mem: 3.772GB, GPUmem: 10.000GB, step: 2000, lr: 0.000040, grad: 82163.7969, loss: 17087.7383
+INFO - ncsn_runner.py - 2023-07-28 15:24:56,445 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 15:24:57,813 - elapsed: 0:37:43.656, step: 2000, mem: 3.772GB, GPUmem: 10.000GB, test_loss: 81350.7266
+INFO - ncsn_runner.py - 2023-07-28 15:26:29,366 - elapsed: 0:39:15.208, train time: 0.2168, mem: 2.401GB, GPUmem: 10.000GB, step: 2100, lr: 0.000042, grad: 172153.7031, loss: 15500.0645
+INFO - ncsn_runner.py - 2023-07-28 15:27:54,183 - elapsed: 0:40:40.025, train time: 0.2242, mem: 2.401GB, GPUmem: 10.000GB, step: 2200, lr: 0.000044, grad: 132951.2969, loss: 13012.3662
+INFO - ncsn_runner.py - 2023-07-28 15:29:17,737 - elapsed: 0:42:03.579, train time: 0.2316, mem: 2.401GB, GPUmem: 10.000GB, step: 2300, lr: 0.000046, grad: 72376.5547, loss: 10420.6963
+INFO - ncsn_runner.py - 2023-07-28 15:30:42,870 - elapsed: 0:43:28.712, train time: 0.2390, mem: 2.401GB, GPUmem: 10.000GB, step: 2400, lr: 0.000048, grad: 101802.6953, loss: 10738.0439
+INFO - ncsn_runner.py - 2023-07-28 15:32:06,998 - elapsed: 0:44:52.841, train time: 0.2464, mem: 2.403GB, GPUmem: 10.000GB, step: 2500, lr: 0.000050, grad: 138166.4375, loss: 10001.7266
+INFO - ncsn_runner.py - 2023-07-28 15:33:27,935 - elapsed: 0:46:13.777, train time: 0.2537, mem: 2.403GB, GPUmem: 10.000GB, step: 2600, lr: 0.000052, grad: 131606.7656, loss: 8591.4727
+INFO - ncsn_runner.py - 2023-07-28 15:34:49,520 - elapsed: 0:47:35.363, train time: 0.2611, mem: 2.403GB, GPUmem: 10.000GB, step: 2700, lr: 0.000054, grad: 104454.3594, loss: 8398.4922
+INFO - ncsn_runner.py - 2023-07-28 15:36:10,938 - elapsed: 0:48:56.781, train time: 0.2684, mem: 2.278GB, GPUmem: 10.000GB, step: 2800, lr: 0.000056, grad: 241689.1406, loss: 8969.3789
+INFO - ncsn_runner.py - 2023-07-28 15:37:32,058 - elapsed: 0:50:17.899, train time: 0.2758, mem: 2.278GB, GPUmem: 10.000GB, step: 2900, lr: 0.000058, grad: 149662.2344, loss: 6855.3369
+INFO - ncsn_runner.py - 2023-07-28 15:38:51,233 - elapsed: 0:51:37.076, train time: 0.2832, mem: 2.206GB, GPUmem: 10.000GB, step: 3000, lr: 0.000060, grad: 111764.0938, loss: 7557.5132
+INFO - ncsn_runner.py - 2023-07-28 15:38:51,270 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 15:38:52,184 - elapsed: 0:51:38.026, step: 3000, mem: 2.206GB, GPUmem: 10.000GB, test_loss: 23532.0254
+INFO - ncsn_runner.py - 2023-07-28 15:40:14,041 - elapsed: 0:52:59.884, train time: 0.2906, mem: 2.206GB, GPUmem: 10.000GB, step: 3100, lr: 0.000062, grad: 80221.2578, loss: 6641.0264
+INFO - ncsn_runner.py - 2023-07-28 15:41:32,563 - elapsed: 0:54:18.404, train time: 0.2980, mem: 2.170GB, GPUmem: 10.000GB, step: 3200, lr: 0.000064, grad: 1144261.7500, loss: 20184.5820
+INFO - ncsn_runner.py - 2023-07-28 15:43:01,076 - elapsed: 0:55:46.919, train time: 0.3054, mem: 2.171GB, GPUmem: 10.000GB, step: 3300, lr: 0.000066, grad: 325904.3125, loss: 8594.0674
+INFO - ncsn_runner.py - 2023-07-28 15:44:33,705 - elapsed: 0:57:19.547, train time: 0.3127, mem: 2.154GB, GPUmem: 10.000GB, step: 3400, lr: 0.000068, grad: 204881.5625, loss: 8067.9512
+INFO - ncsn_runner.py - 2023-07-28 15:46:05,791 - elapsed: 0:58:51.634, train time: 0.3201, mem: 2.154GB, GPUmem: 10.000GB, step: 3500, lr: 0.000070, grad: 430157.0938, loss: 12041.3291
+INFO - ncsn_runner.py - 2023-07-28 15:47:38,209 - elapsed: 1:00:24.051, train time: 0.3275, mem: 2.145GB, GPUmem: 10.000GB, step: 3600, lr: 0.000072, grad: 184334.1719, loss: 6039.2842
+INFO - ncsn_runner.py - 2023-07-28 15:49:09,635 - elapsed: 1:01:55.477, train time: 0.3349, mem: 2.145GB, GPUmem: 10.000GB, step: 3700, lr: 0.000074, grad: 217000.2344, loss: 5465.0742
+INFO - ncsn_runner.py - 2023-07-28 15:50:39,088 - elapsed: 1:03:24.931, train time: 0.3423, mem: 2.145GB, GPUmem: 10.000GB, step: 3800, lr: 0.000076, grad: 146109.3594, loss: 3985.5916
+INFO - ncsn_runner.py - 2023-07-28 15:52:09,724 - elapsed: 1:04:55.567, train time: 0.3496, mem: 2.140GB, GPUmem: 10.000GB, step: 3900, lr: 0.000078, grad: 186557.3281, loss: 5292.2466
+INFO - ncsn_runner.py - 2023-07-28 15:53:39,786 - elapsed: 1:06:25.627, train time: 0.3570, mem: 2.141GB, GPUmem: 10.000GB, step: 4000, lr: 0.000080, grad: 151219.8594, loss: 4064.1238
+INFO - ncsn_runner.py - 2023-07-28 15:53:39,833 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 15:53:40,942 - elapsed: 1:06:26.784, step: 4000, mem: 2.141GB, GPUmem: 10.000GB, test_loss: 8137.8286
+INFO - ncsn_runner.py - 2023-07-28 15:55:14,582 - elapsed: 1:08:00.425, train time: 0.3644, mem: 2.138GB, GPUmem: 10.000GB, step: 4100, lr: 0.000082, grad: 157537.8750, loss: 5226.5859
+INFO - ncsn_runner.py - 2023-07-28 15:56:43,524 - elapsed: 1:09:29.366, train time: 0.3718, mem: 2.138GB, GPUmem: 10.000GB, step: 4200, lr: 0.000084, grad: 175822.9062, loss: 7943.6748
+INFO - ncsn_runner.py - 2023-07-28 15:58:12,630 - elapsed: 1:10:58.472, train time: 0.3792, mem: 2.137GB, GPUmem: 10.000GB, step: 4300, lr: 0.000086, grad: 186314.2500, loss: 4622.7451
+INFO - ncsn_runner.py - 2023-07-28 15:59:39,799 - elapsed: 1:12:25.641, train time: 0.3867, mem: 2.137GB, GPUmem: 10.000GB, step: 4400, lr: 0.000088, grad: 130329.8359, loss: 5971.2031
+INFO - ncsn_runner.py - 2023-07-28 16:01:08,244 - elapsed: 1:13:54.087, train time: 0.3940, mem: 2.137GB, GPUmem: 10.000GB, step: 4500, lr: 0.000090, grad: 307255.3125, loss: 9800.3652
+INFO - ncsn_runner.py - 2023-07-28 16:02:36,844 - elapsed: 1:15:22.686, train time: 0.4014, mem: 2.137GB, GPUmem: 10.000GB, step: 4600, lr: 0.000092, grad: 279855.9375, loss: 12079.4570
+INFO - ncsn_runner.py - 2023-07-28 16:04:02,002 - elapsed: 1:16:47.844, train time: 0.4088, mem: 2.138GB, GPUmem: 10.000GB, step: 4700, lr: 0.000094, grad: 69913.9375, loss: 3806.4431
+INFO - ncsn_runner.py - 2023-07-28 16:05:30,297 - elapsed: 1:18:16.140, train time: 0.4162, mem: 2.137GB, GPUmem: 10.000GB, step: 4800, lr: 0.000096, grad: 77731.4453, loss: 1942.4745
+INFO - ncsn_runner.py - 2023-07-28 16:06:58,871 - elapsed: 1:19:44.712, train time: 0.4236, mem: 2.137GB, GPUmem: 10.000GB, step: 4900, lr: 0.000098, grad: 172405.5156, loss: 2665.0645
+INFO - ncsn_runner.py - 2023-07-28 16:08:24,296 - elapsed: 1:21:10.139, train time: 0.4310, mem: 2.137GB, GPUmem: 10.000GB, step: 5000, lr: 0.000100, grad: 109623.2812, loss: 2350.9463
+INFO - ncsn_runner.py - 2023-07-28 16:08:24,340 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 16:08:25,464 - elapsed: 1:21:11.306, step: 5000, mem: 2.137GB, GPUmem: 10.000GB, test_loss: 4947.1582
+INFO - ncsn_runner.py - 2023-07-28 16:09:55,013 - elapsed: 1:22:40.856, train time: 0.4384, mem: 2.137GB, GPUmem: 10.000GB, step: 5100, lr: 0.000100, grad: 238831.6719, loss: 9403.8027
+INFO - ncsn_runner.py - 2023-07-28 16:11:21,763 - elapsed: 1:24:07.605, train time: 0.4458, mem: 2.137GB, GPUmem: 10.000GB, step: 5200, lr: 0.000100, grad: 87911.9609, loss: 2874.4917
+INFO - ncsn_runner.py - 2023-07-28 16:12:50,009 - elapsed: 1:25:35.852, train time: 0.4532, mem: 2.137GB, GPUmem: 10.000GB, step: 5300, lr: 0.000100, grad: 406594.4375, loss: 8680.1494
+INFO - ncsn_runner.py - 2023-07-28 16:14:16,472 - elapsed: 1:27:02.315, train time: 0.4606, mem: 2.137GB, GPUmem: 10.000GB, step: 5400, lr: 0.000100, grad: 635345.4375, loss: 10424.0107
+INFO - ncsn_runner.py - 2023-07-28 16:15:41,564 - elapsed: 1:28:27.407, train time: 0.4680, mem: 2.137GB, GPUmem: 10.000GB, step: 5500, lr: 0.000100, grad: 62171.9102, loss: 2108.3267
+INFO - ncsn_runner.py - 2023-07-28 16:17:07,093 - elapsed: 1:29:52.936, train time: 0.4753, mem: 2.137GB, GPUmem: 10.000GB, step: 5600, lr: 0.000100, grad: 88489.2734, loss: 3246.5957
+INFO - ncsn_runner.py - 2023-07-28 16:18:33,274 - elapsed: 1:31:19.116, train time: 0.4828, mem: 2.138GB, GPUmem: 10.000GB, step: 5700, lr: 0.000100, grad: 51156.6680, loss: 1048.4453
+INFO - ncsn_runner.py - 2023-07-28 16:19:59,920 - elapsed: 1:32:45.761, train time: 0.4901, mem: 2.138GB, GPUmem: 10.000GB, step: 5800, lr: 0.000100, grad: 186671.7031, loss: 8495.8887
+INFO - ncsn_runner.py - 2023-07-28 16:21:25,239 - elapsed: 1:34:11.082, train time: 0.4975, mem: 2.138GB, GPUmem: 10.000GB, step: 5900, lr: 0.000100, grad: 88168.8203, loss: 1999.7198
+INFO - ncsn_runner.py - 2023-07-28 16:22:50,777 - elapsed: 1:35:36.618, train time: 0.5049, mem: 2.138GB, GPUmem: 10.000GB, step: 6000, lr: 0.000100, grad: 49486.5430, loss: 1292.6050
+INFO - ncsn_runner.py - 2023-07-28 16:22:50,811 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 16:22:51,871 - elapsed: 1:35:37.713, step: 6000, mem: 2.138GB, GPUmem: 10.000GB, test_loss: 2583.8662
+INFO - ncsn_runner.py - 2023-07-28 16:24:19,662 - elapsed: 1:37:05.504, train time: 0.5123, mem: 2.138GB, GPUmem: 10.000GB, step: 6100, lr: 0.000100, grad: 70336.3516, loss: 1798.7941
+INFO - ncsn_runner.py - 2023-07-28 16:25:46,322 - elapsed: 1:38:32.164, train time: 0.5197, mem: 2.138GB, GPUmem: 10.000GB, step: 6200, lr: 0.000100, grad: 29673.3535, loss: 2417.1638
+INFO - ncsn_runner.py - 2023-07-28 16:27:12,584 - elapsed: 1:39:58.427, train time: 0.5271, mem: 2.138GB, GPUmem: 10.000GB, step: 6300, lr: 0.000100, grad: 61572.5469, loss: 1301.5522
+INFO - ncsn_runner.py - 2023-07-28 16:28:35,198 - elapsed: 1:41:21.041, train time: 0.5349, mem: 2.143GB, GPUmem: 10.000GB, step: 6400, lr: 0.000100, grad: 110148.7422, loss: 1503.6062
+INFO - ncsn_runner.py - 2023-07-28 16:30:00,371 - elapsed: 1:42:46.214, train time: 0.5423, mem: 2.140GB, GPUmem: 10.000GB, step: 6500, lr: 0.000100, grad: 104342.1250, loss: 3409.7744
+INFO - ncsn_runner.py - 2023-07-28 16:31:26,473 - elapsed: 1:44:12.316, train time: 0.5497, mem: 2.139GB, GPUmem: 10.000GB, step: 6600, lr: 0.000100, grad: 109847.5312, loss: 3994.8462
+INFO - ncsn_runner.py - 2023-07-28 16:32:50,622 - elapsed: 1:45:36.463, train time: 0.5572, mem: 2.014GB, GPUmem: 10.000GB, step: 6700, lr: 0.000100, grad: 79874.6328, loss: 1458.6880
+INFO - ncsn_runner.py - 2023-07-28 16:34:14,823 - elapsed: 1:47:00.665, train time: 0.5647, mem: 2.014GB, GPUmem: 10.000GB, step: 6800, lr: 0.000100, grad: 85663.3125, loss: 1642.6924
+INFO - ncsn_runner.py - 2023-07-28 16:35:38,972 - elapsed: 1:48:24.815, train time: 0.5721, mem: 2.012GB, GPUmem: 10.000GB, step: 6900, lr: 0.000100, grad: 53161.0312, loss: 718.8888
+INFO - ncsn_runner.py - 2023-07-28 16:37:02,216 - elapsed: 1:49:48.058, train time: 0.5795, mem: 1.248GB, GPUmem: 10.000GB, step: 7000, lr: 0.000100, grad: 83360.1875, loss: 3698.7166
+INFO - ncsn_runner.py - 2023-07-28 16:37:02,251 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 16:37:03,353 - elapsed: 1:49:49.194, step: 7000, mem: 1.248GB, GPUmem: 10.000GB, test_loss: 1379.6404
+INFO - ncsn_runner.py - 2023-07-28 16:38:27,980 - elapsed: 1:51:13.823, train time: 0.5870, mem: 1.248GB, GPUmem: 10.000GB, step: 7100, lr: 0.000100, grad: 118344.3438, loss: 3195.2803
+INFO - ncsn_runner.py - 2023-07-28 16:39:52,388 - elapsed: 1:52:38.231, train time: 0.5944, mem: 1.248GB, GPUmem: 10.000GB, step: 7200, lr: 0.000100, grad: 136184.2031, loss: 3838.3765
+INFO - ncsn_runner.py - 2023-07-28 16:41:16,364 - elapsed: 1:54:02.206, train time: 0.6018, mem: 0.840GB, GPUmem: 10.000GB, step: 7300, lr: 0.000100, grad: 100373.8828, loss: 1554.0938
+INFO - ncsn_runner.py - 2023-07-28 16:42:37,895 - elapsed: 1:55:23.738, train time: 0.6092, mem: 0.840GB, GPUmem: 10.000GB, step: 7400, lr: 0.000100, grad: 78100.2656, loss: 1321.2751
+INFO - ncsn_runner.py - 2023-07-28 16:44:01,309 - elapsed: 1:56:47.152, train time: 0.6166, mem: 0.840GB, GPUmem: 10.000GB, step: 7500, lr: 0.000100, grad: 349998.0625, loss: 10456.2852
+INFO - ncsn_runner.py - 2023-07-28 16:45:24,538 - elapsed: 1:58:10.380, train time: 0.6240, mem: 0.840GB, GPUmem: 10.000GB, step: 7600, lr: 0.000100, grad: 42617.1914, loss: 568.0177
+INFO - ncsn_runner.py - 2023-07-28 16:46:48,260 - elapsed: 1:59:34.102, train time: 0.6314, mem: 0.753GB, GPUmem: 10.000GB, step: 7700, lr: 0.000100, grad: 44414.2422, loss: 1448.0879
+INFO - ncsn_runner.py - 2023-07-28 16:48:11,411 - elapsed: 2:00:57.253, train time: 0.6388, mem: 0.753GB, GPUmem: 10.000GB, step: 7800, lr: 0.000100, grad: 115019.3672, loss: 1677.9585
+INFO - ncsn_runner.py - 2023-07-28 16:49:42,694 - elapsed: 2:02:28.537, train time: 0.6491, mem: 0.753GB, GPUmem: 10.000GB, step: 7900, lr: 0.000100, grad: 102498.3359, loss: 1007.0580
+INFO - ncsn_runner.py - 2023-07-28 16:51:59,195 - elapsed: 2:04:45.037, train time: 0.6714, mem: 0.761GB, GPUmem: 10.000GB, step: 8000, lr: 0.000100, grad: 165704.3750, loss: 12460.7207
+INFO - ncsn_runner.py - 2023-07-28 16:51:59,231 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 16:52:00,438 - elapsed: 2:04:46.281, step: 8000, mem: 0.761GB, GPUmem: 10.000GB, test_loss: 2594.1899
+INFO - ncsn_runner.py - 2023-07-28 16:53:44,084 - elapsed: 2:06:29.926, train time: 0.6839, mem: 0.761GB, GPUmem: 10.000GB, step: 8100, lr: 0.000100, grad: 67295.9531, loss: 1976.3701
+INFO - ncsn_runner.py - 2023-07-28 16:55:13,592 - elapsed: 2:07:59.434, train time: 0.6925, mem: 0.753GB, GPUmem: 10.000GB, step: 8200, lr: 0.000100, grad: 74496.6484, loss: 541.3311
+INFO - ncsn_runner.py - 2023-07-28 16:57:39,500 - elapsed: 2:10:25.343, train time: 0.7175, mem: 0.709GB, GPUmem: 10.000GB, step: 8300, lr: 0.000100, grad: 71799.6406, loss: 2495.2810
+INFO - ncsn_runner.py - 2023-07-28 17:00:02,635 - elapsed: 2:12:48.478, train time: 0.7418, mem: 0.709GB, GPUmem: 10.000GB, step: 8400, lr: 0.000100, grad: 52399.0703, loss: 1250.2278
+INFO - ncsn_runner.py - 2023-07-28 17:02:30,300 - elapsed: 2:15:16.142, train time: 0.7677, mem: 0.605GB, GPUmem: 10.000GB, step: 8500, lr: 0.000100, grad: 110241.2109, loss: 1914.6755
+INFO - ncsn_runner.py - 2023-07-28 17:04:14,415 - elapsed: 2:17:00.258, train time: 0.7814, mem: 0.605GB, GPUmem: 10.000GB, step: 8600, lr: 0.000100, grad: 74107.2031, loss: 1646.4617
+INFO - ncsn_runner.py - 2023-07-28 17:05:36,000 - elapsed: 2:18:21.842, train time: 0.7889, mem: 0.605GB, GPUmem: 10.000GB, step: 8700, lr: 0.000100, grad: 23961.7715, loss: 510.4339
+INFO - ncsn_runner.py - 2023-07-28 17:06:59,420 - elapsed: 2:19:45.262, train time: 0.7963, mem: 0.530GB, GPUmem: 10.000GB, step: 8800, lr: 0.000100, grad: 45762.0039, loss: 347.5089
+INFO - ncsn_runner.py - 2023-07-28 17:08:19,900 - elapsed: 2:21:05.742, train time: 0.8037, mem: 0.530GB, GPUmem: 10.000GB, step: 8900, lr: 0.000100, grad: 35939.6406, loss: 541.7437
+INFO - ncsn_runner.py - 2023-07-28 17:09:40,709 - elapsed: 2:22:26.551, train time: 0.8112, mem: 0.530GB, GPUmem: 10.000GB, step: 9000, lr: 0.000100, grad: 66497.1172, loss: 2273.1494
+INFO - ncsn_runner.py - 2023-07-28 17:09:40,748 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 17:09:41,661 - elapsed: 2:22:27.503, step: 9000, mem: 0.530GB, GPUmem: 10.000GB, test_loss: 697.5022
+INFO - ncsn_runner.py - 2023-07-28 17:11:04,222 - elapsed: 2:23:50.063, train time: 0.8186, mem: 0.515GB, GPUmem: 10.000GB, step: 9100, lr: 0.000100, grad: 52867.0039, loss: 1419.6637
+INFO - ncsn_runner.py - 2023-07-28 17:12:25,950 - elapsed: 2:25:11.791, train time: 0.8259, mem: 0.515GB, GPUmem: 10.000GB, step: 9200, lr: 0.000100, grad: 72195.9141, loss: 2057.9460
+INFO - ncsn_runner.py - 2023-07-28 17:13:46,347 - elapsed: 2:26:32.190, train time: 0.8333, mem: 0.515GB, GPUmem: 10.000GB, step: 9300, lr: 0.000100, grad: 78382.6250, loss: 666.2818
+INFO - ncsn_runner.py - 2023-07-28 17:15:05,812 - elapsed: 2:27:51.654, train time: 0.8407, mem: 0.515GB, GPUmem: 10.000GB, step: 9400, lr: 0.000100, grad: 49136.4023, loss: 1194.4313
+INFO - ncsn_runner.py - 2023-07-28 17:16:25,543 - elapsed: 2:29:11.384, train time: 0.8481, mem: 0.515GB, GPUmem: 10.000GB, step: 9500, lr: 0.000100, grad: 32245.9844, loss: 1399.4941
+INFO - ncsn_runner.py - 2023-07-28 17:17:45,158 - elapsed: 2:30:30.999, train time: 0.8555, mem: 0.515GB, GPUmem: 10.000GB, step: 9600, lr: 0.000100, grad: 53494.2656, loss: 2505.2170
+INFO - ncsn_runner.py - 2023-07-28 17:19:05,893 - elapsed: 2:31:51.736, train time: 0.8628, mem: 0.515GB, GPUmem: 10.000GB, step: 9700, lr: 0.000100, grad: 43290.8008, loss: 355.5919
+INFO - ncsn_runner.py - 2023-07-28 17:20:26,606 - elapsed: 2:33:12.449, train time: 0.8702, mem: 0.515GB, GPUmem: 10.000GB, step: 9800, lr: 0.000100, grad: 20655.4160, loss: 415.6643
+INFO - ncsn_runner.py - 2023-07-28 17:21:45,497 - elapsed: 2:34:31.340, train time: 0.8776, mem: 0.515GB, GPUmem: 10.000GB, step: 9900, lr: 0.000100, grad: 42096.3867, loss: 786.1426
+INFO - ncsn_runner.py - 2023-07-28 17:23:04,734 - elapsed: 2:35:50.577, train time: 0.8850, mem: 0.515GB, GPUmem: 10.000GB, step: 10000, lr: 0.000100, grad: 24169.6250, loss: 284.6921
+INFO - ncsn_runner.py - 2023-07-28 17:23:04,770 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 17:23:05,810 - elapsed: 2:35:51.652, step: 10000, mem: 0.515GB, GPUmem: 10.000GB, test_loss: 9398.7285
+INFO - ncsn_runner.py - 2023-07-28 17:24:29,163 - elapsed: 2:37:15.005, train time: 0.8925, mem: 0.515GB, GPUmem: 10.000GB, step: 10100, lr: 0.000100, grad: 44539.8398, loss: 1518.7928
+INFO - ncsn_runner.py - 2023-07-28 17:25:46,518 - elapsed: 2:38:32.360, train time: 0.8998, mem: 0.515GB, GPUmem: 10.000GB, step: 10200, lr: 0.000100, grad: 41464.4609, loss: 1253.3967
+INFO - ncsn_runner.py - 2023-07-28 17:27:06,174 - elapsed: 2:39:52.017, train time: 0.9072, mem: 0.516GB, GPUmem: 10.000GB, step: 10300, lr: 0.000100, grad: 54927.8281, loss: 2989.1589
+INFO - ncsn_runner.py - 2023-07-28 17:28:21,178 - elapsed: 2:41:07.020, train time: 0.9146, mem: 0.516GB, GPUmem: 10.000GB, step: 10400, lr: 0.000100, grad: 36017.2812, loss: 690.0004
+INFO - ncsn_runner.py - 2023-07-28 17:29:38,742 - elapsed: 2:42:24.584, train time: 0.9220, mem: 0.516GB, GPUmem: 10.000GB, step: 10500, lr: 0.000100, grad: 26936.2402, loss: 859.6548
+INFO - ncsn_runner.py - 2023-07-28 17:30:58,915 - elapsed: 2:43:44.758, train time: 0.9293, mem: 0.516GB, GPUmem: 10.000GB, step: 10600, lr: 0.000100, grad: 25270.8867, loss: 471.6345
+INFO - ncsn_runner.py - 2023-07-28 17:32:19,310 - elapsed: 2:45:05.153, train time: 0.9367, mem: 0.516GB, GPUmem: 10.000GB, step: 10700, lr: 0.000100, grad: 63451.9688, loss: 3733.7871
+INFO - ncsn_runner.py - 2023-07-28 17:33:38,981 - elapsed: 2:46:24.824, train time: 0.9442, mem: 0.516GB, GPUmem: 10.000GB, step: 10800, lr: 0.000100, grad: 49890.3906, loss: 3107.8015
+INFO - ncsn_runner.py - 2023-07-28 17:34:58,438 - elapsed: 2:47:44.281, train time: 0.9515, mem: 0.516GB, GPUmem: 10.000GB, step: 10900, lr: 0.000100, grad: 33793.9062, loss: 766.8785
+INFO - ncsn_runner.py - 2023-07-28 17:36:18,815 - elapsed: 2:49:04.657, train time: 0.9589, mem: 0.516GB, GPUmem: 10.000GB, step: 11000, lr: 0.000100, grad: 57919.1367, loss: 1823.1738
+INFO - ncsn_runner.py - 2023-07-28 17:36:18,863 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 17:36:19,867 - elapsed: 2:49:05.710, step: 11000, mem: 0.516GB, GPUmem: 10.000GB, test_loss: 355.4932
+INFO - ncsn_runner.py - 2023-07-28 17:37:42,807 - elapsed: 2:50:28.650, train time: 0.9663, mem: 0.516GB, GPUmem: 10.000GB, step: 11100, lr: 0.000100, grad: 110038.9297, loss: 17748.3223
+INFO - ncsn_runner.py - 2023-07-28 17:39:01,714 - elapsed: 2:51:47.557, train time: 0.9738, mem: 0.516GB, GPUmem: 10.000GB, step: 11200, lr: 0.000100, grad: 39563.7422, loss: 297.3966
+INFO - ncsn_runner.py - 2023-07-28 17:40:22,395 - elapsed: 2:53:08.237, train time: 0.9811, mem: 0.516GB, GPUmem: 10.000GB, step: 11300, lr: 0.000100, grad: 42138.0039, loss: 318.7885
+INFO - ncsn_runner.py - 2023-07-28 17:41:42,950 - elapsed: 2:54:28.793, train time: 0.9885, mem: 0.516GB, GPUmem: 10.000GB, step: 11400, lr: 0.000100, grad: 40576.5859, loss: 492.6605
+INFO - ncsn_runner.py - 2023-07-28 17:43:03,397 - elapsed: 2:55:49.239, train time: 0.9959, mem: 0.516GB, GPUmem: 10.000GB, step: 11500, lr: 0.000100, grad: 42909.2891, loss: 497.6667
+INFO - ncsn_runner.py - 2023-07-28 17:44:21,254 - elapsed: 2:57:07.097, train time: 1.0034, mem: 0.516GB, GPUmem: 10.000GB, step: 11600, lr: 0.000100, grad: 32470.8223, loss: 2077.9465
+INFO - ncsn_runner.py - 2023-07-28 17:45:41,419 - elapsed: 2:58:27.261, train time: 1.0108, mem: 0.516GB, GPUmem: 10.000GB, step: 11700, lr: 0.000100, grad: 38629.6133, loss: 615.8515
+INFO - ncsn_runner.py - 2023-07-28 17:47:02,490 - elapsed: 2:59:48.333, train time: 1.0182, mem: 0.516GB, GPUmem: 10.000GB, step: 11800, lr: 0.000100, grad: 43058.6992, loss: 2177.1384
+INFO - ncsn_runner.py - 2023-07-28 17:48:20,720 - elapsed: 3:01:06.563, train time: 1.0261, mem: 0.611GB, GPUmem: 10.000GB, step: 11900, lr: 0.000100, grad: 92348.1172, loss: 5712.3569
+INFO - ncsn_runner.py - 2023-07-28 17:49:37,706 - elapsed: 3:02:23.549, train time: 1.0335, mem: 0.615GB, GPUmem: 10.000GB, step: 12000, lr: 0.000100, grad: 37222.2266, loss: 966.1031
+INFO - ncsn_runner.py - 2023-07-28 17:49:37,742 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 17:49:38,756 - elapsed: 3:02:24.597, step: 12000, mem: 0.622GB, GPUmem: 10.000GB, test_loss: 487.2173
+INFO - ncsn_runner.py - 2023-07-28 17:50:57,647 - elapsed: 3:03:43.489, train time: 1.0409, mem: 0.622GB, GPUmem: 10.000GB, step: 12100, lr: 0.000100, grad: 44294.8555, loss: 3120.5149
+INFO - ncsn_runner.py - 2023-07-28 17:52:15,224 - elapsed: 3:05:01.067, train time: 1.0482, mem: 0.622GB, GPUmem: 10.000GB, step: 12200, lr: 0.000100, grad: 27836.0566, loss: 1130.9967
+INFO - ncsn_runner.py - 2023-07-28 17:53:31,585 - elapsed: 3:06:17.427, train time: 1.0556, mem: 0.622GB, GPUmem: 10.000GB, step: 12300, lr: 0.000100, grad: 21397.1758, loss: 678.5989
+INFO - ncsn_runner.py - 2023-07-28 17:54:49,023 - elapsed: 3:07:34.865, train time: 1.0630, mem: 0.619GB, GPUmem: 10.000GB, step: 12400, lr: 0.000100, grad: 22138.5156, loss: 1042.0947
+INFO - ncsn_runner.py - 2023-07-28 17:56:05,652 - elapsed: 3:08:51.493, train time: 1.0704, mem: 0.619GB, GPUmem: 10.000GB, step: 12500, lr: 0.000100, grad: 23830.1406, loss: 622.2220
+INFO - ncsn_runner.py - 2023-07-28 17:57:22,315 - elapsed: 3:10:08.157, train time: 1.0778, mem: 0.619GB, GPUmem: 10.000GB, step: 12600, lr: 0.000100, grad: 55835.1523, loss: 616.7931
+INFO - ncsn_runner.py - 2023-07-28 17:58:37,664 - elapsed: 3:11:23.506, train time: 1.0852, mem: 0.619GB, GPUmem: 10.000GB, step: 12700, lr: 0.000100, grad: 40402.3086, loss: 997.3177
+INFO - ncsn_runner.py - 2023-07-28 17:59:54,303 - elapsed: 3:12:40.145, train time: 1.0925, mem: 0.619GB, GPUmem: 10.000GB, step: 12800, lr: 0.000100, grad: 108200.6719, loss: 5159.1489
+INFO - ncsn_runner.py - 2023-07-28 18:01:10,710 - elapsed: 3:13:56.552, train time: 1.0999, mem: 0.619GB, GPUmem: 10.000GB, step: 12900, lr: 0.000100, grad: 30521.1934, loss: 2586.6797
+INFO - ncsn_runner.py - 2023-07-28 18:02:26,521 - elapsed: 3:15:12.362, train time: 1.1073, mem: 0.619GB, GPUmem: 10.000GB, step: 13000, lr: 0.000100, grad: 28095.6484, loss: 869.9141
+INFO - ncsn_runner.py - 2023-07-28 18:02:26,559 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 18:02:27,526 - elapsed: 3:15:13.368, step: 13000, mem: 0.619GB, GPUmem: 10.000GB, test_loss: 563.8484
+INFO - ncsn_runner.py - 2023-07-28 18:03:46,470 - elapsed: 3:16:32.312, train time: 1.1147, mem: 0.619GB, GPUmem: 10.000GB, step: 13100, lr: 0.000100, grad: 32320.9980, loss: 3053.4963
+INFO - ncsn_runner.py - 2023-07-28 18:05:03,845 - elapsed: 3:17:49.688, train time: 1.1221, mem: 0.619GB, GPUmem: 10.000GB, step: 13200, lr: 0.000100, grad: 47254.5312, loss: 1374.9055
+INFO - ncsn_runner.py - 2023-07-28 18:06:21,536 - elapsed: 3:19:07.378, train time: 1.1295, mem: 0.619GB, GPUmem: 10.000GB, step: 13300, lr: 0.000100, grad: 16859.5938, loss: 385.7669
+INFO - ncsn_runner.py - 2023-07-28 18:07:37,768 - elapsed: 3:20:23.610, train time: 1.1368, mem: 0.619GB, GPUmem: 10.000GB, step: 13400, lr: 0.000100, grad: 29963.7715, loss: 451.5447
+INFO - ncsn_runner.py - 2023-07-28 18:08:53,741 - elapsed: 3:21:39.584, train time: 1.1443, mem: 0.619GB, GPUmem: 10.000GB, step: 13500, lr: 0.000100, grad: 50508.6719, loss: 3696.4370
+INFO - ncsn_runner.py - 2023-07-28 18:10:12,504 - elapsed: 3:22:58.346, train time: 1.1516, mem: 0.619GB, GPUmem: 10.000GB, step: 13600, lr: 0.000100, grad: 24215.3809, loss: 414.9333
+INFO - ncsn_runner.py - 2023-07-28 18:11:28,852 - elapsed: 3:24:14.694, train time: 1.1590, mem: 0.619GB, GPUmem: 10.000GB, step: 13700, lr: 0.000100, grad: 128836.4297, loss: 5803.4849
+INFO - ncsn_runner.py - 2023-07-28 18:12:48,106 - elapsed: 3:25:33.949, train time: 1.1664, mem: 0.619GB, GPUmem: 10.000GB, step: 13800, lr: 0.000100, grad: 40486.8008, loss: 1847.4519
+INFO - ncsn_runner.py - 2023-07-28 18:14:05,707 - elapsed: 3:26:51.550, train time: 1.1738, mem: 0.619GB, GPUmem: 10.000GB, step: 13900, lr: 0.000100, grad: 49553.6133, loss: 3360.8638
+INFO - ncsn_runner.py - 2023-07-28 18:15:23,006 - elapsed: 3:28:08.848, train time: 1.1812, mem: 0.619GB, GPUmem: 10.000GB, step: 14000, lr: 0.000100, grad: 16661.5586, loss: 978.4451
+INFO - ncsn_runner.py - 2023-07-28 18:15:23,042 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 18:15:24,012 - elapsed: 3:28:09.853, step: 14000, mem: 0.619GB, GPUmem: 10.000GB, test_loss: 413.2153
+INFO - ncsn_runner.py - 2023-07-28 18:16:46,567 - elapsed: 3:29:32.409, train time: 1.1886, mem: 0.619GB, GPUmem: 10.000GB, step: 14100, lr: 0.000100, grad: 34096.3867, loss: 2324.5813
+INFO - ncsn_runner.py - 2023-07-28 18:18:05,784 - elapsed: 3:30:51.627, train time: 1.1960, mem: 0.619GB, GPUmem: 10.000GB, step: 14200, lr: 0.000100, grad: 40283.4805, loss: 3699.0427
+INFO - ncsn_runner.py - 2023-07-28 18:19:24,987 - elapsed: 3:32:10.830, train time: 1.2034, mem: 0.619GB, GPUmem: 10.000GB, step: 14300, lr: 0.000100, grad: 26363.1582, loss: 1188.3845
+INFO - ncsn_runner.py - 2023-07-28 18:20:43,654 - elapsed: 3:33:29.497, train time: 1.2108, mem: 0.619GB, GPUmem: 10.000GB, step: 14400, lr: 0.000100, grad: 30030.0234, loss: 400.6754
+INFO - ncsn_runner.py - 2023-07-28 18:22:01,964 - elapsed: 3:34:47.807, train time: 1.2182, mem: 0.619GB, GPUmem: 10.000GB, step: 14500, lr: 0.000100, grad: 17351.6406, loss: 312.2572
+INFO - ncsn_runner.py - 2023-07-28 18:23:20,555 - elapsed: 3:36:06.396, train time: 1.2256, mem: 0.619GB, GPUmem: 10.000GB, step: 14600, lr: 0.000100, grad: 29787.1914, loss: 724.7753
+INFO - ncsn_runner.py - 2023-07-28 18:24:40,471 - elapsed: 3:37:26.314, train time: 1.2330, mem: 0.619GB, GPUmem: 10.000GB, step: 14700, lr: 0.000100, grad: 27807.6992, loss: 788.9406
+INFO - ncsn_runner.py - 2023-07-28 18:26:00,301 - elapsed: 3:38:46.144, train time: 1.2404, mem: 0.619GB, GPUmem: 10.000GB, step: 14800, lr: 0.000100, grad: 22172.4805, loss: 344.3650
+INFO - ncsn_runner.py - 2023-07-28 18:27:17,864 - elapsed: 3:40:03.707, train time: 1.2481, mem: 0.619GB, GPUmem: 10.000GB, step: 14900, lr: 0.000100, grad: 31875.4727, loss: 262.1772
+INFO - ncsn_runner.py - 2023-07-28 18:28:36,599 - elapsed: 3:41:22.441, train time: 1.2555, mem: 0.619GB, GPUmem: 10.000GB, step: 15000, lr: 0.000100, grad: 25039.2324, loss: 496.7794
+INFO - ncsn_runner.py - 2023-07-28 18:28:36,635 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 18:28:37,662 - elapsed: 3:41:23.505, step: 15000, mem: 0.619GB, GPUmem: 10.000GB, test_loss: 235.6102
+INFO - ncsn_runner.py - 2023-07-28 18:30:00,758 - elapsed: 3:42:46.601, train time: 1.2629, mem: 0.619GB, GPUmem: 10.000GB, step: 15100, lr: 0.000100, grad: 34395.0703, loss: 354.6939
+INFO - ncsn_runner.py - 2023-07-28 18:31:21,853 - elapsed: 3:44:07.696, train time: 1.2703, mem: 0.619GB, GPUmem: 10.000GB, step: 15200, lr: 0.000100, grad: 27705.7656, loss: 468.1808
+INFO - ncsn_runner.py - 2023-07-28 18:32:41,940 - elapsed: 3:45:27.783, train time: 1.2777, mem: 0.619GB, GPUmem: 10.000GB, step: 15300, lr: 0.000100, grad: 27823.6230, loss: 160.1443
+INFO - ncsn_runner.py - 2023-07-28 18:34:00,736 - elapsed: 3:46:46.579, train time: 1.2851, mem: 0.620GB, GPUmem: 10.000GB, step: 15400, lr: 0.000100, grad: 21906.6113, loss: 410.4648
+INFO - ncsn_runner.py - 2023-07-28 18:35:20,183 - elapsed: 3:48:06.026, train time: 1.2924, mem: 0.620GB, GPUmem: 10.000GB, step: 15500, lr: 0.000100, grad: 27077.6055, loss: 658.5657
+INFO - ncsn_runner.py - 2023-07-28 18:36:41,083 - elapsed: 3:49:26.926, train time: 1.2998, mem: 0.619GB, GPUmem: 10.000GB, step: 15600, lr: 0.000100, grad: 40228.0430, loss: 2475.0281
+INFO - ncsn_runner.py - 2023-07-28 18:38:01,690 - elapsed: 3:50:47.533, train time: 1.3072, mem: 0.619GB, GPUmem: 10.000GB, step: 15700, lr: 0.000100, grad: 14789.4297, loss: 649.8290
+INFO - ncsn_runner.py - 2023-07-28 18:39:17,735 - elapsed: 3:52:03.576, train time: 1.3146, mem: 0.619GB, GPUmem: 10.000GB, step: 15800, lr: 0.000100, grad: 61215.0078, loss: 1740.4159
+INFO - ncsn_runner.py - 2023-07-28 18:40:38,384 - elapsed: 3:53:24.227, train time: 1.3220, mem: 0.619GB, GPUmem: 10.000GB, step: 15900, lr: 0.000100, grad: 20212.6348, loss: 1099.1227
+INFO - ncsn_runner.py - 2023-07-28 18:41:57,655 - elapsed: 3:54:43.498, train time: 1.3293, mem: 0.619GB, GPUmem: 10.000GB, step: 16000, lr: 0.000100, grad: 15274.6064, loss: 174.8474
+INFO - ncsn_runner.py - 2023-07-28 18:41:57,691 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 18:41:58,735 - elapsed: 3:54:44.578, step: 16000, mem: 0.622GB, GPUmem: 10.000GB, test_loss: 196.9158
+INFO - ncsn_runner.py - 2023-07-28 18:43:21,436 - elapsed: 3:56:07.278, train time: 1.3367, mem: 0.622GB, GPUmem: 10.000GB, step: 16100, lr: 0.000100, grad: 16480.8691, loss: 1260.4241
+INFO - ncsn_runner.py - 2023-07-28 18:44:40,535 - elapsed: 3:57:26.378, train time: 1.3441, mem: 0.621GB, GPUmem: 10.000GB, step: 16200, lr: 0.000100, grad: 42101.2734, loss: 3518.6338
+INFO - ncsn_runner.py - 2023-07-28 18:46:00,030 - elapsed: 3:58:45.872, train time: 1.3515, mem: 0.621GB, GPUmem: 10.000GB, step: 16300, lr: 0.000100, grad: 23547.1875, loss: 1824.6584
+INFO - ncsn_runner.py - 2023-07-28 18:47:20,503 - elapsed: 4:00:06.346, train time: 1.3588, mem: 0.621GB, GPUmem: 10.000GB, step: 16400, lr: 0.000100, grad: 77433.0547, loss: 10274.0605
+INFO - ncsn_runner.py - 2023-07-28 18:48:40,944 - elapsed: 4:01:26.787, train time: 1.3662, mem: 0.620GB, GPUmem: 10.000GB, step: 16500, lr: 0.000100, grad: 23846.7168, loss: 341.3589
+INFO - ncsn_runner.py - 2023-07-28 18:50:00,598 - elapsed: 4:02:46.439, train time: 1.3736, mem: 0.620GB, GPUmem: 10.000GB, step: 16600, lr: 0.000100, grad: 24380.7012, loss: 2730.1157
+INFO - ncsn_runner.py - 2023-07-28 18:51:19,811 - elapsed: 4:04:05.653, train time: 1.3810, mem: 0.620GB, GPUmem: 10.000GB, step: 16700, lr: 0.000100, grad: 29585.7324, loss: 2994.7883
+INFO - ncsn_runner.py - 2023-07-28 18:52:40,066 - elapsed: 4:05:25.909, train time: 1.3884, mem: 0.620GB, GPUmem: 10.000GB, step: 16800, lr: 0.000100, grad: 22200.3086, loss: 847.1836
+INFO - ncsn_runner.py - 2023-07-28 18:53:59,855 - elapsed: 4:06:45.698, train time: 1.3958, mem: 0.620GB, GPUmem: 10.000GB, step: 16900, lr: 0.000100, grad: 64578.5391, loss: 2950.1924
+INFO - ncsn_runner.py - 2023-07-28 18:55:19,132 - elapsed: 4:08:04.975, train time: 1.4031, mem: 0.620GB, GPUmem: 10.000GB, step: 17000, lr: 0.000100, grad: 25187.4902, loss: 329.0682
+INFO - ncsn_runner.py - 2023-07-28 18:55:19,168 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 18:55:20,082 - elapsed: 4:08:05.924, step: 17000, mem: 0.621GB, GPUmem: 10.000GB, test_loss: 388.1882
+INFO - ncsn_runner.py - 2023-07-28 18:56:42,427 - elapsed: 4:09:28.269, train time: 1.4106, mem: 0.621GB, GPUmem: 10.000GB, step: 17100, lr: 0.000100, grad: 27971.2656, loss: 126.1922
+INFO - ncsn_runner.py - 2023-07-28 18:58:00,834 - elapsed: 4:10:46.677, train time: 1.4180, mem: 0.621GB, GPUmem: 10.000GB, step: 17200, lr: 0.000100, grad: 38143.6914, loss: 3424.7458
+INFO - ncsn_runner.py - 2023-07-28 18:59:19,386 - elapsed: 4:12:05.228, train time: 1.4254, mem: 0.621GB, GPUmem: 10.000GB, step: 17300, lr: 0.000100, grad: 31078.8320, loss: 528.5096
+INFO - ncsn_runner.py - 2023-07-28 19:00:40,054 - elapsed: 4:13:25.897, train time: 1.4328, mem: 0.621GB, GPUmem: 10.000GB, step: 17400, lr: 0.000100, grad: 25210.3652, loss: 590.6071
+INFO - ncsn_runner.py - 2023-07-28 19:02:00,484 - elapsed: 4:14:46.326, train time: 1.4402, mem: 0.621GB, GPUmem: 10.000GB, step: 17500, lr: 0.000100, grad: 25684.3281, loss: 398.5465
+INFO - ncsn_runner.py - 2023-07-28 19:03:18,619 - elapsed: 4:16:04.462, train time: 1.4475, mem: 0.621GB, GPUmem: 10.000GB, step: 17600, lr: 0.000100, grad: 31087.4961, loss: 4844.6084
+INFO - ncsn_runner.py - 2023-07-28 19:04:38,581 - elapsed: 4:17:24.423, train time: 1.4549, mem: 0.621GB, GPUmem: 10.000GB, step: 17700, lr: 0.000100, grad: 32868.0625, loss: 1186.1569
+INFO - ncsn_runner.py - 2023-07-28 19:05:57,120 - elapsed: 4:18:42.961, train time: 1.4623, mem: 0.621GB, GPUmem: 10.000GB, step: 17800, lr: 0.000100, grad: 29976.4727, loss: 2698.4128
+INFO - ncsn_runner.py - 2023-07-28 19:07:16,302 - elapsed: 4:20:02.145, train time: 1.4698, mem: 0.621GB, GPUmem: 10.000GB, step: 17900, lr: 0.000100, grad: 25376.8730, loss: 194.6560
+INFO - ncsn_runner.py - 2023-07-28 19:08:31,731 - elapsed: 4:21:17.574, train time: 1.4780, mem: 0.621GB, GPUmem: 10.000GB, step: 18000, lr: 0.000100, grad: 86396.7109, loss: 12181.5410
+INFO - ncsn_runner.py - 2023-07-28 19:08:31,773 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 19:08:32,949 - elapsed: 4:21:18.791, step: 18000, mem: 0.621GB, GPUmem: 10.000GB, test_loss: 844.8386
+INFO - ncsn_runner.py - 2023-07-28 19:09:54,973 - elapsed: 4:22:40.816, train time: 1.4861, mem: 0.621GB, GPUmem: 10.000GB, step: 18100, lr: 0.000100, grad: 29697.2559, loss: 2669.4780
+INFO - ncsn_runner.py - 2023-07-28 19:11:14,057 - elapsed: 4:23:59.899, train time: 1.4934, mem: 0.621GB, GPUmem: 10.000GB, step: 18200, lr: 0.000100, grad: 28484.4629, loss: 854.1600
+INFO - ncsn_runner.py - 2023-07-28 19:12:36,382 - elapsed: 4:25:22.225, train time: 1.5008, mem: 0.621GB, GPUmem: 10.000GB, step: 18300, lr: 0.000100, grad: 22249.1270, loss: 1297.4044
+INFO - ncsn_runner.py - 2023-07-28 19:13:55,533 - elapsed: 4:26:41.375, train time: 1.5082, mem: 0.621GB, GPUmem: 10.000GB, step: 18400, lr: 0.000100, grad: 21327.0996, loss: 251.7766
+INFO - ncsn_runner.py - 2023-07-28 19:15:14,941 - elapsed: 4:28:00.784, train time: 1.5156, mem: 0.621GB, GPUmem: 10.000GB, step: 18500, lr: 0.000100, grad: 21574.3340, loss: 1473.1631
+INFO - ncsn_runner.py - 2023-07-28 19:16:36,013 - elapsed: 4:29:21.856, train time: 1.5230, mem: 0.621GB, GPUmem: 10.000GB, step: 18600, lr: 0.000100, grad: 25780.3066, loss: 1158.1328
+INFO - ncsn_runner.py - 2023-07-28 19:17:55,662 - elapsed: 4:30:41.504, train time: 1.5304, mem: 0.621GB, GPUmem: 10.000GB, step: 18700, lr: 0.000100, grad: 23126.5977, loss: 545.3969
+INFO - ncsn_runner.py - 2023-07-28 19:19:15,822 - elapsed: 4:32:01.665, train time: 1.5378, mem: 0.621GB, GPUmem: 10.000GB, step: 18800, lr: 0.000100, grad: 30013.2676, loss: 4278.2598
+INFO - ncsn_runner.py - 2023-07-28 19:20:35,837 - elapsed: 4:33:21.680, train time: 1.5452, mem: 0.621GB, GPUmem: 10.000GB, step: 18900, lr: 0.000100, grad: 28578.1445, loss: 116.3231
+INFO - ncsn_runner.py - 2023-07-28 19:21:56,544 - elapsed: 4:34:42.386, train time: 1.5526, mem: 0.621GB, GPUmem: 10.000GB, step: 19000, lr: 0.000100, grad: 49645.4219, loss: 4698.9116
+INFO - ncsn_runner.py - 2023-07-28 19:21:56,608 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 19:21:57,617 - elapsed: 4:34:43.459, step: 19000, mem: 0.621GB, GPUmem: 10.000GB, test_loss: 1285.4417
+INFO - ncsn_runner.py - 2023-07-28 19:23:18,621 - elapsed: 4:36:04.464, train time: 1.5600, mem: 0.621GB, GPUmem: 10.000GB, step: 19100, lr: 0.000100, grad: 17693.8203, loss: 603.5092
+INFO - ncsn_runner.py - 2023-07-28 19:24:38,918 - elapsed: 4:37:24.761, train time: 1.5674, mem: 0.621GB, GPUmem: 10.000GB, step: 19200, lr: 0.000100, grad: 15937.6924, loss: 2070.2749
+INFO - ncsn_runner.py - 2023-07-28 19:25:58,850 - elapsed: 4:38:44.692, train time: 1.5748, mem: 0.621GB, GPUmem: 10.000GB, step: 19300, lr: 0.000100, grad: 19504.3203, loss: 342.9341
+INFO - ncsn_runner.py - 2023-07-28 19:27:18,413 - elapsed: 4:40:04.256, train time: 1.5822, mem: 0.621GB, GPUmem: 10.000GB, step: 19400, lr: 0.000100, grad: 22368.1211, loss: 1094.6761
+INFO - ncsn_runner.py - 2023-07-28 19:28:37,261 - elapsed: 4:41:23.102, train time: 1.5895, mem: 0.621GB, GPUmem: 10.000GB, step: 19500, lr: 0.000100, grad: 45348.0039, loss: 896.6075
+INFO - ncsn_runner.py - 2023-07-28 19:29:57,661 - elapsed: 4:42:43.504, train time: 1.5969, mem: 0.621GB, GPUmem: 10.000GB, step: 19600, lr: 0.000100, grad: 29495.3672, loss: 3132.8152
+INFO - ncsn_runner.py - 2023-07-28 19:31:18,040 - elapsed: 4:44:03.882, train time: 1.6043, mem: 0.621GB, GPUmem: 10.000GB, step: 19700, lr: 0.000100, grad: 20829.6797, loss: 342.0135
+INFO - ncsn_runner.py - 2023-07-28 19:32:37,696 - elapsed: 4:45:23.539, train time: 1.6117, mem: 0.621GB, GPUmem: 10.000GB, step: 19800, lr: 0.000100, grad: 18982.4512, loss: 915.0180
+INFO - ncsn_runner.py - 2023-07-28 19:33:55,929 - elapsed: 4:46:41.771, train time: 1.6191, mem: 0.621GB, GPUmem: 10.000GB, step: 19900, lr: 0.000100, grad: 50407.9570, loss: 4906.6592
+INFO - ncsn_runner.py - 2023-07-28 19:35:14,780 - elapsed: 4:48:00.623, train time: 1.6264, mem: 0.621GB, GPUmem: 10.000GB, step: 20000, lr: 0.000100, grad: 23163.5488, loss: 709.6931
+INFO - ncsn_runner.py - 2023-07-28 19:35:14,821 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 19:35:15,863 - elapsed: 4:48:01.706, step: 20000, mem: 0.621GB, GPUmem: 10.000GB, test_loss: 300.6518
+INFO - ncsn_runner.py - 2023-07-28 19:36:39,000 - elapsed: 4:49:24.842, train time: 1.6339, mem: 0.621GB, GPUmem: 10.000GB, step: 20100, lr: 0.000100, grad: 26259.9922, loss: 1627.8271
+INFO - ncsn_runner.py - 2023-07-28 19:37:57,857 - elapsed: 4:50:43.698, train time: 1.6412, mem: 0.621GB, GPUmem: 10.000GB, step: 20200, lr: 0.000100, grad: 30537.5684, loss: 4917.4624
+INFO - ncsn_runner.py - 2023-07-28 19:39:17,216 - elapsed: 4:52:03.059, train time: 1.6486, mem: 0.621GB, GPUmem: 10.000GB, step: 20300, lr: 0.000100, grad: 36560.9531, loss: 982.0165
+INFO - ncsn_runner.py - 2023-07-28 19:40:38,538 - elapsed: 4:53:24.380, train time: 1.6560, mem: 0.621GB, GPUmem: 10.000GB, step: 20400, lr: 0.000100, grad: 38007.2344, loss: 5172.3926
+INFO - ncsn_runner.py - 2023-07-28 19:41:57,739 - elapsed: 4:54:43.582, train time: 1.6634, mem: 0.621GB, GPUmem: 10.000GB, step: 20500, lr: 0.000100, grad: 10412.8232, loss: 360.9810
+INFO - ncsn_runner.py - 2023-07-28 19:43:17,490 - elapsed: 4:56:03.331, train time: 1.6708, mem: 0.621GB, GPUmem: 10.000GB, step: 20600, lr: 0.000100, grad: 16504.1035, loss: 1542.2402
+INFO - ncsn_runner.py - 2023-07-28 19:44:36,185 - elapsed: 4:57:22.028, train time: 1.6782, mem: 0.621GB, GPUmem: 10.000GB, step: 20700, lr: 0.000100, grad: 14987.5088, loss: 2716.6716
+INFO - ncsn_runner.py - 2023-07-28 19:45:56,269 - elapsed: 4:58:42.111, train time: 1.6856, mem: 0.621GB, GPUmem: 10.000GB, step: 20800, lr: 0.000100, grad: 36077.7188, loss: 4894.7954
+INFO - ncsn_runner.py - 2023-07-28 19:47:16,401 - elapsed: 5:00:02.244, train time: 1.6929, mem: 0.621GB, GPUmem: 10.000GB, step: 20900, lr: 0.000100, grad: 29085.1016, loss: 439.0363
+INFO - ncsn_runner.py - 2023-07-28 19:48:35,956 - elapsed: 5:01:21.799, train time: 1.7003, mem: 0.621GB, GPUmem: 10.000GB, step: 21000, lr: 0.000100, grad: 31077.0234, loss: 793.7698
+INFO - ncsn_runner.py - 2023-07-28 19:48:35,992 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 19:48:36,887 - elapsed: 5:01:22.729, step: 21000, mem: 0.621GB, GPUmem: 10.000GB, test_loss: 215.8023
+INFO - ncsn_runner.py - 2023-07-28 19:49:59,349 - elapsed: 5:02:45.192, train time: 1.7077, mem: 0.621GB, GPUmem: 10.000GB, step: 21100, lr: 0.000100, grad: 24127.2012, loss: 449.1846
+INFO - ncsn_runner.py - 2023-07-28 19:51:18,323 - elapsed: 5:04:04.166, train time: 1.7151, mem: 0.621GB, GPUmem: 10.000GB, step: 21200, lr: 0.000100, grad: 24493.3320, loss: 292.7048
+INFO - ncsn_runner.py - 2023-07-28 19:52:38,565 - elapsed: 5:05:24.406, train time: 1.7225, mem: 0.621GB, GPUmem: 10.000GB, step: 21300, lr: 0.000100, grad: 26405.3262, loss: 353.3768
+INFO - ncsn_runner.py - 2023-07-28 19:53:58,272 - elapsed: 5:06:44.114, train time: 1.7299, mem: 0.621GB, GPUmem: 10.000GB, step: 21400, lr: 0.000100, grad: 31159.3340, loss: 261.5119
+INFO - ncsn_runner.py - 2023-07-28 19:55:18,745 - elapsed: 5:08:04.588, train time: 1.7372, mem: 0.621GB, GPUmem: 10.000GB, step: 21500, lr: 0.000100, grad: 22546.5137, loss: 1398.1514
+INFO - ncsn_runner.py - 2023-07-28 19:56:38,289 - elapsed: 5:09:24.132, train time: 1.7446, mem: 0.621GB, GPUmem: 10.000GB, step: 21600, lr: 0.000100, grad: 23393.2480, loss: 368.5390
+INFO - ncsn_runner.py - 2023-07-28 19:57:56,675 - elapsed: 5:10:42.517, train time: 1.7521, mem: 0.621GB, GPUmem: 10.000GB, step: 21700, lr: 0.000100, grad: 21622.8711, loss: 272.7045
+INFO - ncsn_runner.py - 2023-07-28 19:59:15,653 - elapsed: 5:12:01.496, train time: 1.7594, mem: 0.621GB, GPUmem: 10.000GB, step: 21800, lr: 0.000100, grad: 38881.1445, loss: 4150.0845
+INFO - ncsn_runner.py - 2023-07-28 20:00:36,353 - elapsed: 5:13:22.196, train time: 1.7668, mem: 0.621GB, GPUmem: 10.000GB, step: 21900, lr: 0.000100, grad: 22609.1562, loss: 541.7313
+INFO - ncsn_runner.py - 2023-07-28 20:01:56,003 - elapsed: 5:14:41.846, train time: 1.7742, mem: 0.621GB, GPUmem: 10.000GB, step: 22000, lr: 0.000100, grad: 18741.1992, loss: 1203.8403
+INFO - ncsn_runner.py - 2023-07-28 20:01:56,044 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 20:01:57,109 - elapsed: 5:14:42.951, step: 22000, mem: 0.621GB, GPUmem: 10.000GB, test_loss: 1260.7684
+INFO - ncsn_runner.py - 2023-07-28 20:03:19,806 - elapsed: 5:16:05.648, train time: 1.7816, mem: 0.621GB, GPUmem: 10.000GB, step: 22100, lr: 0.000100, grad: 14286.6416, loss: 714.9486
+INFO - ncsn_runner.py - 2023-07-28 20:04:39,639 - elapsed: 5:17:25.481, train time: 1.7890, mem: 0.621GB, GPUmem: 10.000GB, step: 22200, lr: 0.000100, grad: 28075.2324, loss: 223.8921
+INFO - ncsn_runner.py - 2023-07-28 20:05:59,628 - elapsed: 5:18:45.471, train time: 1.7964, mem: 0.621GB, GPUmem: 10.000GB, step: 22300, lr: 0.000100, grad: 19343.4980, loss: 143.2705
+INFO - ncsn_runner.py - 2023-07-28 20:07:20,872 - elapsed: 5:20:06.714, train time: 1.8038, mem: 0.621GB, GPUmem: 10.000GB, step: 22400, lr: 0.000100, grad: 45494.6875, loss: 1628.5631
+INFO - ncsn_runner.py - 2023-07-28 20:08:39,773 - elapsed: 5:21:25.616, train time: 1.8111, mem: 0.621GB, GPUmem: 10.000GB, step: 22500, lr: 0.000100, grad: 13181.3232, loss: 1843.6614
+INFO - ncsn_runner.py - 2023-07-28 20:09:59,413 - elapsed: 5:22:45.255, train time: 1.8186, mem: 0.621GB, GPUmem: 10.000GB, step: 22600, lr: 0.000100, grad: 11383.8418, loss: 215.4883
+INFO - ncsn_runner.py - 2023-07-28 20:11:17,530 - elapsed: 5:24:03.372, train time: 1.8260, mem: 0.621GB, GPUmem: 10.000GB, step: 22700, lr: 0.000100, grad: 80731.0156, loss: 3477.4941
+INFO - ncsn_runner.py - 2023-07-28 20:12:38,981 - elapsed: 5:25:24.823, train time: 1.8333, mem: 0.621GB, GPUmem: 10.000GB, step: 22800, lr: 0.000100, grad: 32780.2188, loss: 271.4236
+INFO - ncsn_runner.py - 2023-07-28 20:13:59,639 - elapsed: 5:26:45.481, train time: 1.8407, mem: 0.621GB, GPUmem: 10.000GB, step: 22900, lr: 0.000100, grad: 16863.8613, loss: 766.1001
+INFO - ncsn_runner.py - 2023-07-28 20:15:18,797 - elapsed: 5:28:04.639, train time: 1.8481, mem: 0.621GB, GPUmem: 10.000GB, step: 23000, lr: 0.000100, grad: 56249.6484, loss: 5267.2959
+INFO - ncsn_runner.py - 2023-07-28 20:15:18,835 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 20:15:19,866 - elapsed: 5:28:05.709, step: 23000, mem: 0.622GB, GPUmem: 10.000GB, test_loss: 201.3062
+INFO - ncsn_runner.py - 2023-07-28 20:16:43,528 - elapsed: 5:29:29.371, train time: 1.8556, mem: 0.621GB, GPUmem: 10.000GB, step: 23100, lr: 0.000100, grad: 23364.2617, loss: 106.4365
+INFO - ncsn_runner.py - 2023-07-28 20:18:02,644 - elapsed: 5:30:48.486, train time: 1.8630, mem: 0.621GB, GPUmem: 10.000GB, step: 23200, lr: 0.000100, grad: 24999.9863, loss: 608.9517
+INFO - ncsn_runner.py - 2023-07-28 20:19:21,824 - elapsed: 5:32:07.667, train time: 1.8703, mem: 0.622GB, GPUmem: 10.000GB, step: 23300, lr: 0.000100, grad: 10711.1006, loss: 309.4860
+INFO - ncsn_runner.py - 2023-07-28 20:20:41,617 - elapsed: 5:33:27.460, train time: 1.8777, mem: 0.622GB, GPUmem: 10.000GB, step: 23400, lr: 0.000100, grad: 38681.7539, loss: 4175.3574
+INFO - ncsn_runner.py - 2023-07-28 20:22:00,022 - elapsed: 5:34:45.863, train time: 1.8851, mem: 0.622GB, GPUmem: 10.000GB, step: 23500, lr: 0.000100, grad: 23402.9277, loss: 366.9992
+INFO - ncsn_runner.py - 2023-07-28 20:23:19,624 - elapsed: 5:36:05.466, train time: 1.8925, mem: 0.622GB, GPUmem: 10.000GB, step: 23600, lr: 0.000100, grad: 24858.8750, loss: 2420.5059
+INFO - ncsn_runner.py - 2023-07-28 20:24:35,017 - elapsed: 5:37:20.859, train time: 1.8999, mem: 0.622GB, GPUmem: 10.000GB, step: 23700, lr: 0.000100, grad: 29147.1562, loss: 4599.9180
+INFO - ncsn_runner.py - 2023-07-28 20:25:49,501 - elapsed: 5:38:35.344, train time: 1.9073, mem: 0.622GB, GPUmem: 10.000GB, step: 23800, lr: 0.000100, grad: 26197.4492, loss: 1079.0081
+INFO - ncsn_runner.py - 2023-07-28 20:27:04,097 - elapsed: 5:39:49.940, train time: 1.9147, mem: 0.622GB, GPUmem: 10.000GB, step: 23900, lr: 0.000100, grad: 13642.6543, loss: 671.9122
+INFO - ncsn_runner.py - 2023-07-28 20:28:19,002 - elapsed: 5:41:04.843, train time: 1.9221, mem: 0.622GB, GPUmem: 10.000GB, step: 24000, lr: 0.000100, grad: 14374.6172, loss: 620.0844
+INFO - ncsn_runner.py - 2023-07-28 20:28:19,038 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 20:28:20,206 - elapsed: 5:41:06.049, step: 24000, mem: 0.622GB, GPUmem: 10.000GB, test_loss: 372.6986
+INFO - ncsn_runner.py - 2023-07-28 20:29:39,426 - elapsed: 5:42:25.269, train time: 1.9295, mem: 0.622GB, GPUmem: 10.000GB, step: 24100, lr: 0.000100, grad: 20133.7656, loss: 1037.8387
+INFO - ncsn_runner.py - 2023-07-28 20:30:55,136 - elapsed: 5:43:40.978, train time: 1.9369, mem: 0.622GB, GPUmem: 10.000GB, step: 24200, lr: 0.000100, grad: 13495.0469, loss: 596.7136
+INFO - ncsn_runner.py - 2023-07-28 20:32:12,598 - elapsed: 5:44:58.441, train time: 1.9442, mem: 0.622GB, GPUmem: 10.000GB, step: 24300, lr: 0.000100, grad: 28885.1680, loss: 3200.4355
+INFO - ncsn_runner.py - 2023-07-28 20:33:29,936 - elapsed: 5:46:15.777, train time: 1.9516, mem: 0.622GB, GPUmem: 10.000GB, step: 24400, lr: 0.000100, grad: 49515.4102, loss: 6806.6455
+INFO - ncsn_runner.py - 2023-07-28 20:34:48,629 - elapsed: 5:47:34.472, train time: 1.9590, mem: 0.622GB, GPUmem: 10.000GB, step: 24500, lr: 0.000100, grad: 19227.7266, loss: 1251.0980
+INFO - ncsn_runner.py - 2023-07-28 20:36:07,461 - elapsed: 5:48:53.304, train time: 1.9664, mem: 0.622GB, GPUmem: 10.000GB, step: 24600, lr: 0.000100, grad: 9992.7490, loss: 157.5508
+INFO - ncsn_runner.py - 2023-07-28 20:37:27,495 - elapsed: 5:50:13.337, train time: 1.9738, mem: 0.622GB, GPUmem: 10.000GB, step: 24700, lr: 0.000100, grad: 42027.8125, loss: 679.1630
+INFO - ncsn_runner.py - 2023-07-28 20:38:46,842 - elapsed: 5:51:32.684, train time: 1.9812, mem: 0.622GB, GPUmem: 10.000GB, step: 24800, lr: 0.000100, grad: 16537.2695, loss: 1021.2947
+INFO - ncsn_runner.py - 2023-07-28 20:40:05,241 - elapsed: 5:52:51.083, train time: 1.9886, mem: 0.622GB, GPUmem: 10.000GB, step: 24900, lr: 0.000100, grad: 38040.8594, loss: 5271.4033
+INFO - ncsn_runner.py - 2023-07-28 20:41:22,787 - elapsed: 5:54:08.629, train time: 1.9960, mem: 0.622GB, GPUmem: 10.000GB, step: 25000, lr: 0.000100, grad: 8915.2734, loss: 77.3650
+INFO - ncsn_runner.py - 2023-07-28 20:41:22,822 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 20:41:23,860 - elapsed: 5:54:09.703, step: 25000, mem: 0.623GB, GPUmem: 10.000GB, test_loss: 3357.2251
+INFO - ncsn_runner.py - 2023-07-28 20:42:48,065 - elapsed: 5:55:33.908, train time: 2.0034, mem: 0.623GB, GPUmem: 10.000GB, step: 25100, lr: 0.000100, grad: 25869.7793, loss: 2871.9009
+INFO - ncsn_runner.py - 2023-07-28 20:44:08,892 - elapsed: 5:56:54.733, train time: 2.0108, mem: 0.623GB, GPUmem: 10.000GB, step: 25200, lr: 0.000100, grad: 12012.8037, loss: 262.2625
+INFO - ncsn_runner.py - 2023-07-28 20:45:26,686 - elapsed: 5:58:12.528, train time: 2.0181, mem: 0.623GB, GPUmem: 10.000GB, step: 25300, lr: 0.000100, grad: 12258.8496, loss: 162.3347
+INFO - ncsn_runner.py - 2023-07-28 20:46:46,826 - elapsed: 5:59:32.668, train time: 2.0255, mem: 0.623GB, GPUmem: 10.000GB, step: 25400, lr: 0.000100, grad: 17724.3828, loss: 860.5315
+INFO - ncsn_runner.py - 2023-07-28 20:48:07,946 - elapsed: 6:00:53.788, train time: 2.0329, mem: 0.623GB, GPUmem: 10.000GB, step: 25500, lr: 0.000100, grad: 22354.4004, loss: 971.5043
+INFO - ncsn_runner.py - 2023-07-28 20:49:29,039 - elapsed: 6:02:14.881, train time: 2.0403, mem: 0.623GB, GPUmem: 10.000GB, step: 25600, lr: 0.000100, grad: 42537.2617, loss: 2731.6997
+INFO - ncsn_runner.py - 2023-07-28 20:50:50,327 - elapsed: 6:03:36.170, train time: 2.0477, mem: 0.623GB, GPUmem: 10.000GB, step: 25700, lr: 0.000100, grad: 15114.1221, loss: 558.7495
+INFO - ncsn_runner.py - 2023-07-28 20:52:11,198 - elapsed: 6:04:57.040, train time: 2.0550, mem: 0.623GB, GPUmem: 10.000GB, step: 25800, lr: 0.000100, grad: 18112.2832, loss: 539.9056
+INFO - ncsn_runner.py - 2023-07-28 20:53:32,465 - elapsed: 6:06:18.308, train time: 2.0624, mem: 0.623GB, GPUmem: 10.000GB, step: 25900, lr: 0.000100, grad: 24115.2461, loss: 4888.1230
+INFO - ncsn_runner.py - 2023-07-28 20:54:53,678 - elapsed: 6:07:39.521, train time: 2.0698, mem: 0.623GB, GPUmem: 10.000GB, step: 26000, lr: 0.000100, grad: 28824.9102, loss: 1533.6406
+INFO - ncsn_runner.py - 2023-07-28 20:54:53,715 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 20:54:54,759 - elapsed: 6:07:40.601, step: 26000, mem: 0.625GB, GPUmem: 10.000GB, test_loss: 132.2573
+INFO - ncsn_runner.py - 2023-07-28 20:56:18,041 - elapsed: 6:09:03.884, train time: 2.0773, mem: 0.624GB, GPUmem: 10.000GB, step: 26100, lr: 0.000100, grad: 32775.3086, loss: 2696.8018
+INFO - ncsn_runner.py - 2023-07-28 20:57:38,523 - elapsed: 6:10:24.366, train time: 2.0847, mem: 0.624GB, GPUmem: 10.000GB, step: 26200, lr: 0.000100, grad: 7186.9971, loss: 590.9570
+INFO - ncsn_runner.py - 2023-07-28 20:58:58,401 - elapsed: 6:11:44.243, train time: 2.0920, mem: 0.624GB, GPUmem: 10.000GB, step: 26300, lr: 0.000100, grad: 25492.4062, loss: 215.0002
+INFO - ncsn_runner.py - 2023-07-28 21:00:17,508 - elapsed: 6:13:03.351, train time: 2.0994, mem: 0.624GB, GPUmem: 10.000GB, step: 26400, lr: 0.000100, grad: 22046.5938, loss: 2741.3911
+INFO - ncsn_runner.py - 2023-07-28 21:01:37,590 - elapsed: 6:14:23.433, train time: 2.1068, mem: 0.624GB, GPUmem: 10.000GB, step: 26500, lr: 0.000100, grad: 26456.4141, loss: 2190.7603
+INFO - ncsn_runner.py - 2023-07-28 21:02:58,030 - elapsed: 6:15:43.873, train time: 2.1142, mem: 0.624GB, GPUmem: 10.000GB, step: 26600, lr: 0.000100, grad: 18199.7227, loss: 1044.6710
+INFO - ncsn_runner.py - 2023-07-28 21:04:17,857 - elapsed: 6:17:03.700, train time: 2.1216, mem: 0.624GB, GPUmem: 10.000GB, step: 26700, lr: 0.000100, grad: 26840.7969, loss: 4204.2104
+INFO - ncsn_runner.py - 2023-07-28 21:05:38,476 - elapsed: 6:18:24.319, train time: 2.1290, mem: 0.624GB, GPUmem: 10.000GB, step: 26800, lr: 0.000100, grad: 18620.6582, loss: 155.0781
+INFO - ncsn_runner.py - 2023-07-28 21:06:59,028 - elapsed: 6:19:44.870, train time: 2.1364, mem: 0.624GB, GPUmem: 10.000GB, step: 26900, lr: 0.000100, grad: 17898.0742, loss: 1459.8752
+INFO - ncsn_runner.py - 2023-07-28 21:08:19,183 - elapsed: 6:21:05.025, train time: 2.1438, mem: 0.624GB, GPUmem: 10.000GB, step: 27000, lr: 0.000100, grad: 18578.1777, loss: 1419.5709
+INFO - ncsn_runner.py - 2023-07-28 21:08:19,221 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 21:08:20,459 - elapsed: 6:21:06.301, step: 27000, mem: 0.624GB, GPUmem: 10.000GB, test_loss: 5632.0137
+INFO - ncsn_runner.py - 2023-07-28 21:09:43,431 - elapsed: 6:22:29.273, train time: 2.1512, mem: 0.624GB, GPUmem: 10.000GB, step: 27100, lr: 0.000100, grad: 21994.7988, loss: 250.4846
+INFO - ncsn_runner.py - 2023-07-28 21:11:04,339 - elapsed: 6:23:50.181, train time: 2.1586, mem: 0.624GB, GPUmem: 10.000GB, step: 27200, lr: 0.000100, grad: 51390.8164, loss: 1041.2612
+INFO - ncsn_runner.py - 2023-07-28 21:12:26,343 - elapsed: 6:25:12.186, train time: 2.1660, mem: 0.624GB, GPUmem: 10.000GB, step: 27300, lr: 0.000100, grad: 37303.8867, loss: 3740.4519
+INFO - ncsn_runner.py - 2023-07-28 21:13:47,244 - elapsed: 6:26:33.085, train time: 2.1734, mem: 0.624GB, GPUmem: 10.000GB, step: 27400, lr: 0.000100, grad: 11719.0664, loss: 128.6187
+INFO - ncsn_runner.py - 2023-07-28 21:15:09,483 - elapsed: 6:27:55.325, train time: 2.1807, mem: 0.624GB, GPUmem: 10.000GB, step: 27500, lr: 0.000100, grad: 22548.8398, loss: 338.6938
+INFO - ncsn_runner.py - 2023-07-28 21:16:29,580 - elapsed: 6:29:15.422, train time: 2.1881, mem: 0.624GB, GPUmem: 10.000GB, step: 27600, lr: 0.000100, grad: 23468.2676, loss: 478.3432
+INFO - ncsn_runner.py - 2023-07-28 21:17:50,521 - elapsed: 6:30:36.363, train time: 2.1955, mem: 0.624GB, GPUmem: 10.000GB, step: 27700, lr: 0.000100, grad: 10513.3809, loss: 683.2426
+INFO - ncsn_runner.py - 2023-07-28 21:19:10,006 - elapsed: 6:31:55.849, train time: 2.2029, mem: 0.624GB, GPUmem: 10.000GB, step: 27800, lr: 0.000100, grad: 11877.0605, loss: 688.1940
+INFO - ncsn_runner.py - 2023-07-28 21:20:30,211 - elapsed: 6:33:16.054, train time: 2.2103, mem: 0.624GB, GPUmem: 10.000GB, step: 27900, lr: 0.000100, grad: 10336.7666, loss: 112.7703
+INFO - ncsn_runner.py - 2023-07-28 21:21:49,547 - elapsed: 6:34:35.390, train time: 2.2177, mem: 0.624GB, GPUmem: 10.000GB, step: 28000, lr: 0.000100, grad: 38254.1680, loss: 2001.3583
+INFO - ncsn_runner.py - 2023-07-28 21:21:49,587 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 21:21:50,721 - elapsed: 6:34:36.563, step: 28000, mem: 0.624GB, GPUmem: 10.000GB, test_loss: 8884.3574
+INFO - ncsn_runner.py - 2023-07-28 21:23:13,994 - elapsed: 6:35:59.837, train time: 2.2252, mem: 0.624GB, GPUmem: 10.000GB, step: 28100, lr: 0.000100, grad: 11614.9404, loss: 584.4488
+INFO - ncsn_runner.py - 2023-07-28 21:24:35,721 - elapsed: 6:37:21.564, train time: 2.2325, mem: 0.624GB, GPUmem: 10.000GB, step: 28200, lr: 0.000100, grad: 19052.3379, loss: 2498.8621
+INFO - ncsn_runner.py - 2023-07-28 21:25:55,432 - elapsed: 6:38:41.275, train time: 2.2399, mem: 0.624GB, GPUmem: 10.000GB, step: 28300, lr: 0.000100, grad: 36089.9336, loss: 1672.6567
+INFO - ncsn_runner.py - 2023-07-28 21:27:15,569 - elapsed: 6:40:01.411, train time: 2.2473, mem: 0.624GB, GPUmem: 10.000GB, step: 28400, lr: 0.000100, grad: 14732.2246, loss: 1085.9479
+INFO - ncsn_runner.py - 2023-07-28 21:28:34,915 - elapsed: 6:41:20.758, train time: 2.2547, mem: 0.624GB, GPUmem: 10.000GB, step: 28500, lr: 0.000100, grad: 14483.5752, loss: 1157.2958
+INFO - ncsn_runner.py - 2023-07-28 21:29:55,110 - elapsed: 6:42:40.952, train time: 2.2620, mem: 0.624GB, GPUmem: 10.000GB, step: 28600, lr: 0.000100, grad: 16405.4727, loss: 1660.6914
+INFO - ncsn_runner.py - 2023-07-28 21:31:17,003 - elapsed: 6:44:02.846, train time: 2.2694, mem: 0.624GB, GPUmem: 10.000GB, step: 28700, lr: 0.000100, grad: 19147.3770, loss: 199.5221
+INFO - ncsn_runner.py - 2023-07-28 21:32:36,929 - elapsed: 6:45:22.772, train time: 2.2768, mem: 0.624GB, GPUmem: 10.000GB, step: 28800, lr: 0.000100, grad: 16721.2656, loss: 407.0641
+INFO - ncsn_runner.py - 2023-07-28 21:33:58,195 - elapsed: 6:46:44.037, train time: 2.2842, mem: 0.624GB, GPUmem: 10.000GB, step: 28900, lr: 0.000100, grad: 10088.7529, loss: 739.9044
+INFO - ncsn_runner.py - 2023-07-28 21:35:20,091 - elapsed: 6:48:05.934, train time: 2.2916, mem: 0.624GB, GPUmem: 10.000GB, step: 29000, lr: 0.000100, grad: 16412.9492, loss: 138.4374
+INFO - ncsn_runner.py - 2023-07-28 21:35:20,127 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 21:35:21,214 - elapsed: 6:48:07.057, step: 29000, mem: 0.624GB, GPUmem: 10.000GB, test_loss: 582.4937
+INFO - ncsn_runner.py - 2023-07-28 21:36:46,245 - elapsed: 6:49:32.088, train time: 2.2990, mem: 0.624GB, GPUmem: 10.000GB, step: 29100, lr: 0.000100, grad: 17476.3262, loss: 3344.7661
+INFO - ncsn_runner.py - 2023-07-28 21:38:07,167 - elapsed: 6:50:53.009, train time: 2.3064, mem: 0.624GB, GPUmem: 10.000GB, step: 29200, lr: 0.000100, grad: 44519.2734, loss: 7386.7021
+INFO - ncsn_runner.py - 2023-07-28 21:39:27,045 - elapsed: 6:52:12.888, train time: 2.3137, mem: 0.624GB, GPUmem: 10.000GB, step: 29300, lr: 0.000100, grad: 14148.1348, loss: 521.3430
+INFO - ncsn_runner.py - 2023-07-28 21:40:48,490 - elapsed: 6:53:34.332, train time: 2.3211, mem: 0.624GB, GPUmem: 10.000GB, step: 29400, lr: 0.000100, grad: 15802.1445, loss: 1667.5323
+INFO - ncsn_runner.py - 2023-07-28 21:42:07,086 - elapsed: 6:54:52.929, train time: 2.3285, mem: 0.624GB, GPUmem: 10.000GB, step: 29500, lr: 0.000100, grad: 11790.6133, loss: 746.0288
+INFO - ncsn_runner.py - 2023-07-28 21:43:27,781 - elapsed: 6:56:13.623, train time: 2.3359, mem: 0.624GB, GPUmem: 10.000GB, step: 29600, lr: 0.000100, grad: 22048.1953, loss: 1461.0381
+INFO - ncsn_runner.py - 2023-07-28 21:44:47,684 - elapsed: 6:57:33.527, train time: 2.3433, mem: 0.624GB, GPUmem: 10.000GB, step: 29700, lr: 0.000100, grad: 18103.4023, loss: 1931.1968
+INFO - ncsn_runner.py - 2023-07-28 21:46:08,514 - elapsed: 6:58:54.355, train time: 2.3507, mem: 0.624GB, GPUmem: 10.000GB, step: 29800, lr: 0.000100, grad: 29079.5176, loss: 7951.5303
+INFO - ncsn_runner.py - 2023-07-28 21:47:29,783 - elapsed: 7:00:15.626, train time: 2.3581, mem: 0.624GB, GPUmem: 10.000GB, step: 29900, lr: 0.000100, grad: 21881.0879, loss: 3183.9641
+INFO - ncsn_runner.py - 2023-07-28 21:48:52,799 - elapsed: 7:01:38.641, train time: 2.3655, mem: 0.624GB, GPUmem: 10.000GB, step: 30000, lr: 0.000100, grad: 19287.3828, loss: 628.3616
+INFO - ncsn_runner.py - 2023-07-28 21:48:52,836 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 21:48:53,840 - elapsed: 7:01:39.683, step: 30000, mem: 0.624GB, GPUmem: 10.000GB, test_loss: 683.3069
+INFO - ncsn_runner.py - 2023-07-28 21:50:18,625 - elapsed: 7:03:04.467, train time: 2.3730, mem: 0.624GB, GPUmem: 10.000GB, step: 30100, lr: 0.000100, grad: 21623.1855, loss: 302.6172
+INFO - ncsn_runner.py - 2023-07-28 21:51:39,106 - elapsed: 7:04:24.949, train time: 2.3803, mem: 0.624GB, GPUmem: 10.000GB, step: 30200, lr: 0.000100, grad: 47803.7227, loss: 5950.5537
+INFO - ncsn_runner.py - 2023-07-28 21:53:00,334 - elapsed: 7:05:46.177, train time: 2.3877, mem: 0.624GB, GPUmem: 10.000GB, step: 30300, lr: 0.000100, grad: 10547.7686, loss: 1313.8391
+INFO - ncsn_runner.py - 2023-07-28 21:54:22,171 - elapsed: 7:07:08.013, train time: 2.3951, mem: 0.624GB, GPUmem: 10.000GB, step: 30400, lr: 0.000100, grad: 18238.2266, loss: 593.0473
+INFO - ncsn_runner.py - 2023-07-28 21:55:44,948 - elapsed: 7:08:30.790, train time: 2.4025, mem: 0.624GB, GPUmem: 10.000GB, step: 30500, lr: 0.000100, grad: 12809.6016, loss: 719.0980
+INFO - ncsn_runner.py - 2023-07-28 21:57:05,828 - elapsed: 7:09:51.670, train time: 2.4098, mem: 0.624GB, GPUmem: 10.000GB, step: 30600, lr: 0.000100, grad: 10740.3662, loss: 83.0785
+INFO - ncsn_runner.py - 2023-07-28 21:58:26,096 - elapsed: 7:11:11.937, train time: 2.4173, mem: 0.624GB, GPUmem: 10.000GB, step: 30700, lr: 0.000100, grad: 21183.2656, loss: 504.2732
+INFO - ncsn_runner.py - 2023-07-28 21:59:46,950 - elapsed: 7:12:32.792, train time: 2.4246, mem: 0.624GB, GPUmem: 10.000GB, step: 30800, lr: 0.000100, grad: 6423.5547, loss: 252.2430
+INFO - ncsn_runner.py - 2023-07-28 22:01:07,401 - elapsed: 7:13:53.243, train time: 2.4321, mem: 0.624GB, GPUmem: 10.000GB, step: 30900, lr: 0.000100, grad: 22863.0410, loss: 3084.9478
+INFO - ncsn_runner.py - 2023-07-28 22:02:40,593 - elapsed: 7:15:26.435, train time: 2.4430, mem: 0.593GB, GPUmem: 10.000GB, step: 31000, lr: 0.000100, grad: 66858.7031, loss: 1132.2483
+INFO - ncsn_runner.py - 2023-07-28 22:02:40,630 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 22:02:41,695 - elapsed: 7:15:27.538, step: 31000, mem: 0.593GB, GPUmem: 10.000GB, test_loss: 4346.1011
+INFO - ncsn_runner.py - 2023-07-28 22:04:08,147 - elapsed: 7:16:53.990, train time: 2.4514, mem: 0.593GB, GPUmem: 10.000GB, step: 31100, lr: 0.000100, grad: 11461.2012, loss: 531.9043
+INFO - ncsn_runner.py - 2023-07-28 22:05:32,378 - elapsed: 7:18:18.221, train time: 2.4589, mem: 0.593GB, GPUmem: 10.000GB, step: 31200, lr: 0.000100, grad: 12579.1025, loss: 184.5541
+INFO - ncsn_runner.py - 2023-07-28 22:06:58,692 - elapsed: 7:19:44.534, train time: 2.4669, mem: 0.593GB, GPUmem: 10.000GB, step: 31300, lr: 0.000100, grad: 14131.3926, loss: 267.8253
+INFO - ncsn_runner.py - 2023-07-28 22:08:22,246 - elapsed: 7:21:08.089, train time: 2.4748, mem: 0.581GB, GPUmem: 10.000GB, step: 31400, lr: 0.000100, grad: 12659.5684, loss: 416.9451
+INFO - ncsn_runner.py - 2023-07-28 22:09:46,433 - elapsed: 7:22:32.274, train time: 2.4826, mem: 0.581GB, GPUmem: 10.000GB, step: 31500, lr: 0.000100, grad: 14961.1611, loss: 313.1082
+INFO - ncsn_runner.py - 2023-07-28 22:11:10,404 - elapsed: 7:23:56.245, train time: 2.4904, mem: 0.581GB, GPUmem: 10.000GB, step: 31600, lr: 0.000100, grad: 10911.8604, loss: 347.2018
+INFO - ncsn_runner.py - 2023-07-28 22:12:34,716 - elapsed: 7:25:20.559, train time: 2.4985, mem: 0.580GB, GPUmem: 10.000GB, step: 31700, lr: 0.000100, grad: 9958.9619, loss: 189.4752
+INFO - ncsn_runner.py - 2023-07-28 22:14:02,473 - elapsed: 7:26:48.315, train time: 2.5072, mem: 0.582GB, GPUmem: 10.000GB, step: 31800, lr: 0.000100, grad: 23599.3594, loss: 287.4683
+INFO - ncsn_runner.py - 2023-07-28 22:15:37,155 - elapsed: 7:28:22.998, train time: 2.5185, mem: 1.169GB, GPUmem: 10.000GB, step: 31900, lr: 0.000100, grad: 14568.9443, loss: 1637.9403
+INFO - ncsn_runner.py - 2023-07-28 22:17:02,129 - elapsed: 7:29:47.972, train time: 2.5266, mem: 1.218GB, GPUmem: 10.000GB, step: 32000, lr: 0.000100, grad: 25508.8242, loss: 2231.3364
+INFO - ncsn_runner.py - 2023-07-28 22:17:02,166 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 22:17:03,321 - elapsed: 7:29:49.164, step: 32000, mem: 1.218GB, GPUmem: 10.000GB, test_loss: 1479.3396
+INFO - ncsn_runner.py - 2023-07-28 22:18:33,284 - elapsed: 7:31:19.127, train time: 2.5352, mem: 0.892GB, GPUmem: 10.000GB, step: 32100, lr: 0.000100, grad: 20893.1797, loss: 3543.4229
+INFO - ncsn_runner.py - 2023-07-28 22:20:09,396 - elapsed: 7:32:55.239, train time: 2.5470, mem: 0.713GB, GPUmem: 10.000GB, step: 32200, lr: 0.000100, grad: 16400.5352, loss: 878.6500
+INFO - ncsn_runner.py - 2023-07-28 22:21:35,757 - elapsed: 7:34:21.600, train time: 2.5557, mem: 0.665GB, GPUmem: 10.000GB, step: 32300, lr: 0.000100, grad: 16450.7793, loss: 205.4007
+INFO - ncsn_runner.py - 2023-07-28 22:23:03,469 - elapsed: 7:35:49.312, train time: 2.5645, mem: 0.645GB, GPUmem: 10.000GB, step: 32400, lr: 0.000100, grad: 15871.2920, loss: 192.8397
+INFO - ncsn_runner.py - 2023-07-28 22:24:31,961 - elapsed: 7:37:17.803, train time: 2.5734, mem: 0.626GB, GPUmem: 10.000GB, step: 32500, lr: 0.000100, grad: 9480.6553, loss: 105.5599
+INFO - ncsn_runner.py - 2023-07-28 22:26:00,575 - elapsed: 7:38:46.417, train time: 2.5822, mem: 0.592GB, GPUmem: 10.000GB, step: 32600, lr: 0.000100, grad: 16329.9570, loss: 759.5223
+INFO - ncsn_runner.py - 2023-07-28 22:27:42,456 - elapsed: 7:40:28.298, train time: 2.5945, mem: 0.690GB, GPUmem: 10.000GB, step: 32700, lr: 0.000100, grad: 10891.8447, loss: 554.7113
+INFO - ncsn_runner.py - 2023-07-28 22:29:16,660 - elapsed: 7:42:02.503, train time: 2.6044, mem: 0.669GB, GPUmem: 10.000GB, step: 32800, lr: 0.000100, grad: 19925.2793, loss: 274.3948
+INFO - ncsn_runner.py - 2023-07-28 22:30:55,326 - elapsed: 7:43:41.169, train time: 2.6152, mem: 0.645GB, GPUmem: 10.000GB, step: 32900, lr: 0.000100, grad: 39816.6953, loss: 801.4718
+INFO - ncsn_runner.py - 2023-07-28 22:32:32,230 - elapsed: 7:45:18.073, train time: 2.6259, mem: 0.637GB, GPUmem: 10.000GB, step: 33000, lr: 0.000100, grad: 17186.3965, loss: 2803.0210
+INFO - ncsn_runner.py - 2023-07-28 22:32:32,267 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 22:32:33,527 - elapsed: 7:45:19.368, step: 33000, mem: 0.637GB, GPUmem: 10.000GB, test_loss: 1689.2209
+INFO - ncsn_runner.py - 2023-07-28 22:34:16,897 - elapsed: 7:47:02.739, train time: 2.6364, mem: 0.654GB, GPUmem: 10.000GB, step: 33100, lr: 0.000100, grad: 16356.0068, loss: 758.9150
+INFO - ncsn_runner.py - 2023-07-28 22:35:50,380 - elapsed: 7:48:36.222, train time: 2.6467, mem: 0.645GB, GPUmem: 10.000GB, step: 33200, lr: 0.000100, grad: 21640.0996, loss: 670.4715
+INFO - ncsn_runner.py - 2023-07-28 22:37:28,104 - elapsed: 7:50:13.946, train time: 2.6578, mem: 0.625GB, GPUmem: 10.000GB, step: 33300, lr: 0.000100, grad: 23065.2910, loss: 1321.3499
+INFO - ncsn_runner.py - 2023-07-28 22:39:01,369 - elapsed: 7:51:47.211, train time: 2.6682, mem: 0.619GB, GPUmem: 10.000GB, step: 33400, lr: 0.000100, grad: 12451.2764, loss: 234.4430
+INFO - ncsn_runner.py - 2023-07-28 22:40:35,877 - elapsed: 7:53:21.719, train time: 2.6784, mem: 0.619GB, GPUmem: 10.000GB, step: 33500, lr: 0.000100, grad: 30936.0020, loss: 1693.4434
+INFO - ncsn_runner.py - 2023-07-28 22:42:06,016 - elapsed: 7:54:51.859, train time: 2.6883, mem: 0.546GB, GPUmem: 10.000GB, step: 33600, lr: 0.000100, grad: 32474.4238, loss: 3301.9751
+INFO - ncsn_runner.py - 2023-07-28 22:43:35,432 - elapsed: 7:56:21.274, train time: 2.6979, mem: 0.542GB, GPUmem: 10.000GB, step: 33700, lr: 0.000100, grad: 12342.0010, loss: 1430.9685
+INFO - ncsn_runner.py - 2023-07-28 22:45:09,762 - elapsed: 7:57:55.605, train time: 2.7091, mem: 0.552GB, GPUmem: 10.000GB, step: 33800, lr: 0.000100, grad: 10273.6826, loss: 624.8207
+INFO - ncsn_runner.py - 2023-07-28 22:46:38,216 - elapsed: 7:59:24.059, train time: 2.7177, mem: 0.544GB, GPUmem: 10.000GB, step: 33900, lr: 0.000100, grad: 21617.7930, loss: 1310.0730
+INFO - ncsn_runner.py - 2023-07-28 22:48:05,956 - elapsed: 8:00:51.799, train time: 2.7266, mem: 0.544GB, GPUmem: 10.000GB, step: 34000, lr: 0.000100, grad: 12279.9092, loss: 253.3197
+INFO - ncsn_runner.py - 2023-07-28 22:48:05,993 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 22:48:07,088 - elapsed: 8:00:52.931, step: 34000, mem: 0.543GB, GPUmem: 10.000GB, test_loss: 1871.1847
+INFO - ncsn_runner.py - 2023-07-28 22:49:38,173 - elapsed: 8:02:24.016, train time: 2.7351, mem: 0.536GB, GPUmem: 10.000GB, step: 34100, lr: 0.000100, grad: 9886.5088, loss: 676.1387
+INFO - ncsn_runner.py - 2023-07-28 22:51:05,174 - elapsed: 8:03:51.016, train time: 2.7436, mem: 0.536GB, GPUmem: 10.000GB, step: 34200, lr: 0.000100, grad: 13770.2158, loss: 309.7796
+INFO - ncsn_runner.py - 2023-07-28 22:52:31,749 - elapsed: 8:05:17.591, train time: 2.7510, mem: 0.534GB, GPUmem: 10.000GB, step: 34300, lr: 0.000100, grad: 12487.3193, loss: 162.6958
+INFO - ncsn_runner.py - 2023-07-28 22:53:57,324 - elapsed: 8:06:43.166, train time: 2.7584, mem: 0.534GB, GPUmem: 10.000GB, step: 34400, lr: 0.000100, grad: 14384.6143, loss: 788.1540
+INFO - ncsn_runner.py - 2023-07-28 22:55:23,110 - elapsed: 8:08:08.952, train time: 2.7661, mem: 0.534GB, GPUmem: 10.000GB, step: 34500, lr: 0.000100, grad: 22772.0410, loss: 1028.0363
+INFO - ncsn_runner.py - 2023-07-28 22:56:48,933 - elapsed: 8:09:34.775, train time: 2.7744, mem: 0.531GB, GPUmem: 10.000GB, step: 34600, lr: 0.000100, grad: 10182.9238, loss: 1333.2883
+INFO - ncsn_runner.py - 2023-07-28 22:58:13,605 - elapsed: 8:10:59.448, train time: 2.7823, mem: 0.531GB, GPUmem: 10.000GB, step: 34700, lr: 0.000100, grad: 22544.9297, loss: 2099.3020
+INFO - ncsn_runner.py - 2023-07-28 22:59:37,596 - elapsed: 8:12:23.437, train time: 2.7897, mem: 0.531GB, GPUmem: 10.000GB, step: 34800, lr: 0.000100, grad: 14804.7520, loss: 588.6629
+INFO - ncsn_runner.py - 2023-07-28 23:01:02,923 - elapsed: 8:13:48.766, train time: 2.7973, mem: 0.531GB, GPUmem: 10.000GB, step: 34900, lr: 0.000100, grad: 8406.0566, loss: 648.2471
+INFO - ncsn_runner.py - 2023-07-28 23:02:25,614 - elapsed: 8:15:11.456, train time: 2.8047, mem: 0.461GB, GPUmem: 10.000GB, step: 35000, lr: 0.000100, grad: 7052.0874, loss: 175.0164
+INFO - ncsn_runner.py - 2023-07-28 23:02:25,650 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 23:02:26,702 - elapsed: 8:15:12.544, step: 35000, mem: 0.461GB, GPUmem: 10.000GB, test_loss: 469.5409
+INFO - ncsn_runner.py - 2023-07-28 23:03:50,869 - elapsed: 8:16:36.711, train time: 2.8122, mem: 0.461GB, GPUmem: 10.000GB, step: 35100, lr: 0.000100, grad: 12099.8750, loss: 364.1065
+INFO - ncsn_runner.py - 2023-07-28 23:05:11,785 - elapsed: 8:17:57.628, train time: 2.8198, mem: 0.461GB, GPUmem: 10.000GB, step: 35200, lr: 0.000100, grad: 12460.9668, loss: 670.2736
+INFO - ncsn_runner.py - 2023-07-28 23:06:36,863 - elapsed: 8:19:22.705, train time: 2.8279, mem: 0.461GB, GPUmem: 10.000GB, step: 35300, lr: 0.000100, grad: 9374.9160, loss: 537.2598
+INFO - ncsn_runner.py - 2023-07-28 23:08:01,562 - elapsed: 8:20:47.405, train time: 2.8363, mem: 0.461GB, GPUmem: 10.000GB, step: 35400, lr: 0.000100, grad: 14567.2812, loss: 931.4489
+INFO - ncsn_runner.py - 2023-07-28 23:09:21,570 - elapsed: 8:22:07.413, train time: 2.8446, mem: 0.463GB, GPUmem: 10.000GB, step: 35500, lr: 0.000100, grad: 19360.1230, loss: 1219.5100
+INFO - ncsn_runner.py - 2023-07-28 23:10:42,157 - elapsed: 8:23:28.000, train time: 2.8530, mem: 0.463GB, GPUmem: 10.000GB, step: 35600, lr: 0.000100, grad: 12712.3701, loss: 289.5067
+INFO - ncsn_runner.py - 2023-07-28 23:12:01,456 - elapsed: 8:24:47.299, train time: 2.8615, mem: 0.465GB, GPUmem: 10.000GB, step: 35700, lr: 0.000100, grad: 8900.4688, loss: 79.0020
+INFO - ncsn_runner.py - 2023-07-28 23:13:19,132 - elapsed: 8:26:04.974, train time: 2.8701, mem: 0.463GB, GPUmem: 10.000GB, step: 35800, lr: 0.000100, grad: 21047.6777, loss: 1335.0338
+INFO - ncsn_runner.py - 2023-07-28 23:14:37,632 - elapsed: 8:27:23.475, train time: 2.8785, mem: 0.463GB, GPUmem: 10.000GB, step: 35900, lr: 0.000100, grad: 8576.6182, loss: 295.4323
+INFO - ncsn_runner.py - 2023-07-28 23:15:54,628 - elapsed: 8:28:40.470, train time: 2.8862, mem: 0.463GB, GPUmem: 10.000GB, step: 36000, lr: 0.000100, grad: 12593.4766, loss: 676.9841
+INFO - ncsn_runner.py - 2023-07-28 23:15:54,665 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 23:15:55,500 - elapsed: 8:28:41.342, step: 36000, mem: 0.466GB, GPUmem: 10.000GB, test_loss: 742.3277
+INFO - ncsn_runner.py - 2023-07-28 23:17:23,234 - elapsed: 8:30:09.075, train time: 2.8946, mem: 0.465GB, GPUmem: 10.000GB, step: 36100, lr: 0.000100, grad: 14876.8691, loss: 2213.3767
+INFO - ncsn_runner.py - 2023-07-28 23:18:47,083 - elapsed: 8:31:32.925, train time: 2.9031, mem: 0.465GB, GPUmem: 10.000GB, step: 36200, lr: 0.000100, grad: 185521.7344, loss: 7559.6377
+INFO - ncsn_runner.py - 2023-07-28 23:20:10,212 - elapsed: 8:32:56.055, train time: 2.9119, mem: 0.465GB, GPUmem: 10.000GB, step: 36300, lr: 0.000100, grad: 13227.9014, loss: 794.0936
+INFO - ncsn_runner.py - 2023-07-28 23:21:31,321 - elapsed: 8:34:17.163, train time: 2.9198, mem: 0.465GB, GPUmem: 10.000GB, step: 36400, lr: 0.000100, grad: 15996.9951, loss: 2914.8076
+INFO - ncsn_runner.py - 2023-07-28 23:22:55,089 - elapsed: 8:35:40.932, train time: 2.9284, mem: 0.464GB, GPUmem: 10.000GB, step: 36500, lr: 0.000100, grad: 22132.6094, loss: 2297.2063
+INFO - ncsn_runner.py - 2023-07-28 23:24:17,486 - elapsed: 8:37:03.328, train time: 2.9361, mem: 0.464GB, GPUmem: 10.000GB, step: 36600, lr: 0.000100, grad: 11876.5811, loss: 550.1829
+INFO - ncsn_runner.py - 2023-07-28 23:25:39,459 - elapsed: 8:38:25.301, train time: 2.9438, mem: 0.464GB, GPUmem: 10.000GB, step: 36700, lr: 0.000100, grad: 13185.1387, loss: 361.4801
+INFO - ncsn_runner.py - 2023-07-28 23:27:01,771 - elapsed: 8:39:47.613, train time: 2.9513, mem: 0.464GB, GPUmem: 10.000GB, step: 36800, lr: 0.000100, grad: 14744.6533, loss: 1679.0037
+INFO - ncsn_runner.py - 2023-07-28 23:28:23,467 - elapsed: 8:41:09.309, train time: 2.9591, mem: 0.464GB, GPUmem: 10.000GB, step: 36900, lr: 0.000100, grad: 26025.1562, loss: 1409.2925
+INFO - ncsn_runner.py - 2023-07-28 23:29:46,341 - elapsed: 8:42:32.184, train time: 2.9675, mem: 0.464GB, GPUmem: 10.000GB, step: 37000, lr: 0.000100, grad: 12674.7529, loss: 1371.5287
+INFO - ncsn_runner.py - 2023-07-28 23:29:46,378 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 23:29:47,435 - elapsed: 8:42:33.277, step: 37000, mem: 0.465GB, GPUmem: 10.000GB, test_loss: 48.9764
+INFO - ncsn_runner.py - 2023-07-28 23:31:14,419 - elapsed: 8:44:00.260, train time: 2.9759, mem: 0.465GB, GPUmem: 10.000GB, step: 37100, lr: 0.000100, grad: 18705.9492, loss: 1129.2965
+INFO - ncsn_runner.py - 2023-07-28 23:32:39,574 - elapsed: 8:45:25.416, train time: 2.9846, mem: 0.531GB, GPUmem: 10.000GB, step: 37200, lr: 0.000100, grad: 10832.1162, loss: 521.3181
+INFO - ncsn_runner.py - 2023-07-28 23:34:04,703 - elapsed: 8:46:50.546, train time: 2.9939, mem: 0.529GB, GPUmem: 10.000GB, step: 37300, lr: 0.000100, grad: 46072.1602, loss: 7016.4375
+INFO - ncsn_runner.py - 2023-07-28 23:35:28,180 - elapsed: 8:48:14.022, train time: 3.0022, mem: 0.465GB, GPUmem: 10.000GB, step: 37400, lr: 0.000100, grad: 11447.2881, loss: 1018.4106
+INFO - ncsn_runner.py - 2023-07-28 23:36:51,162 - elapsed: 8:49:37.005, train time: 3.0104, mem: 0.464GB, GPUmem: 10.000GB, step: 37500, lr: 0.000100, grad: 12170.5840, loss: 171.9655
+INFO - ncsn_runner.py - 2023-07-28 23:38:14,813 - elapsed: 8:51:00.656, train time: 3.0183, mem: 0.464GB, GPUmem: 10.000GB, step: 37600, lr: 0.000100, grad: 8349.6299, loss: 363.1407
+INFO - ncsn_runner.py - 2023-07-28 23:39:41,030 - elapsed: 8:52:26.873, train time: 3.0268, mem: 0.464GB, GPUmem: 10.000GB, step: 37700, lr: 0.000100, grad: 21904.9648, loss: 3086.1848
+INFO - ncsn_runner.py - 2023-07-28 23:41:04,909 - elapsed: 8:53:50.751, train time: 3.0352, mem: 0.464GB, GPUmem: 10.000GB, step: 37800, lr: 0.000100, grad: 45948.2773, loss: 2488.1304
+INFO - ncsn_runner.py - 2023-07-28 23:42:27,819 - elapsed: 8:55:13.661, train time: 3.0435, mem: 0.462GB, GPUmem: 10.000GB, step: 37900, lr: 0.000100, grad: 18565.9707, loss: 394.2267
+INFO - ncsn_runner.py - 2023-07-28 23:43:49,399 - elapsed: 8:56:35.241, train time: 3.0521, mem: 0.462GB, GPUmem: 10.000GB, step: 38000, lr: 0.000100, grad: 12642.1475, loss: 379.8819
+INFO - ncsn_runner.py - 2023-07-28 23:43:49,436 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 23:43:50,448 - elapsed: 8:56:36.291, step: 38000, mem: 0.462GB, GPUmem: 10.000GB, test_loss: 270.5808
+INFO - ncsn_runner.py - 2023-07-28 23:45:13,714 - elapsed: 8:57:59.556, train time: 3.0606, mem: 0.462GB, GPUmem: 10.000GB, step: 38100, lr: 0.000100, grad: 11979.3721, loss: 328.2726
+INFO - ncsn_runner.py - 2023-07-28 23:46:36,168 - elapsed: 8:59:22.009, train time: 3.0689, mem: 0.462GB, GPUmem: 10.000GB, step: 38200, lr: 0.000100, grad: 8760.4492, loss: 1026.6190
+INFO - ncsn_runner.py - 2023-07-28 23:47:56,428 - elapsed: 9:00:42.271, train time: 3.0773, mem: 0.462GB, GPUmem: 10.000GB, step: 38300, lr: 0.000100, grad: 24930.9473, loss: 5523.2935
+INFO - ncsn_runner.py - 2023-07-28 23:49:18,979 - elapsed: 9:02:04.821, train time: 3.0857, mem: 0.462GB, GPUmem: 10.000GB, step: 38400, lr: 0.000100, grad: 10304.1045, loss: 903.0475
+INFO - ncsn_runner.py - 2023-07-28 23:50:40,792 - elapsed: 9:03:26.633, train time: 3.0942, mem: 0.462GB, GPUmem: 10.000GB, step: 38500, lr: 0.000100, grad: 17422.5293, loss: 835.6775
+INFO - ncsn_runner.py - 2023-07-28 23:52:03,756 - elapsed: 9:04:49.599, train time: 3.1033, mem: 0.462GB, GPUmem: 10.000GB, step: 38600, lr: 0.000100, grad: 27059.6328, loss: 3625.9895
+INFO - ncsn_runner.py - 2023-07-28 23:53:26,446 - elapsed: 9:06:12.288, train time: 3.1119, mem: 0.462GB, GPUmem: 10.000GB, step: 38700, lr: 0.000100, grad: 8245.0811, loss: 1441.8979
+INFO - ncsn_runner.py - 2023-07-28 23:54:50,718 - elapsed: 9:07:36.559, train time: 3.1204, mem: 0.462GB, GPUmem: 10.000GB, step: 38800, lr: 0.000100, grad: 17686.2324, loss: 1805.9045
+INFO - ncsn_runner.py - 2023-07-28 23:56:14,063 - elapsed: 9:08:59.906, train time: 3.1296, mem: 0.462GB, GPUmem: 10.000GB, step: 38900, lr: 0.000100, grad: 9115.5361, loss: 361.1071
+INFO - ncsn_runner.py - 2023-07-28 23:57:36,415 - elapsed: 9:10:22.258, train time: 3.1383, mem: 0.462GB, GPUmem: 10.000GB, step: 39000, lr: 0.000100, grad: 9119.5527, loss: 1546.9523
+INFO - ncsn_runner.py - 2023-07-28 23:57:36,453 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-28 23:57:37,574 - elapsed: 9:10:23.417, step: 39000, mem: 0.462GB, GPUmem: 10.000GB, test_loss: 731.9778
+INFO - ncsn_runner.py - 2023-07-28 23:59:02,246 - elapsed: 9:11:48.088, train time: 3.1467, mem: 0.462GB, GPUmem: 10.000GB, step: 39100, lr: 0.000100, grad: 9896.3721, loss: 1343.3125
+INFO - ncsn_runner.py - 2023-07-29 00:00:22,938 - elapsed: 9:13:08.781, train time: 3.1542, mem: 0.462GB, GPUmem: 10.000GB, step: 39200, lr: 0.000100, grad: 17080.1719, loss: 830.4309
+INFO - ncsn_runner.py - 2023-07-29 00:01:43,188 - elapsed: 9:14:29.031, train time: 3.1616, mem: 0.462GB, GPUmem: 10.000GB, step: 39300, lr: 0.000100, grad: 14632.6719, loss: 552.2284
+INFO - ncsn_runner.py - 2023-07-29 00:03:01,625 - elapsed: 9:15:47.467, train time: 3.1696, mem: 0.462GB, GPUmem: 10.000GB, step: 39400, lr: 0.000100, grad: 8850.5898, loss: 374.4284
+INFO - ncsn_runner.py - 2023-07-29 00:04:23,497 - elapsed: 9:17:09.340, train time: 3.1789, mem: 0.462GB, GPUmem: 10.000GB, step: 39500, lr: 0.000100, grad: 8898.3477, loss: 960.3568
+INFO - ncsn_runner.py - 2023-07-29 00:05:48,037 - elapsed: 9:18:33.879, train time: 3.1884, mem: 0.462GB, GPUmem: 10.000GB, step: 39600, lr: 0.000100, grad: 15977.5068, loss: 2418.0310
+INFO - ncsn_runner.py - 2023-07-29 00:07:11,692 - elapsed: 9:19:57.533, train time: 3.1976, mem: 0.462GB, GPUmem: 10.000GB, step: 39700, lr: 0.000100, grad: 15913.3486, loss: 1826.4797
+INFO - ncsn_runner.py - 2023-07-29 00:08:35,458 - elapsed: 9:21:21.300, train time: 3.2065, mem: 0.462GB, GPUmem: 10.000GB, step: 39800, lr: 0.000100, grad: 14046.0371, loss: 2582.9177
+INFO - ncsn_runner.py - 2023-07-29 00:09:59,053 - elapsed: 9:22:44.896, train time: 3.2154, mem: 0.462GB, GPUmem: 10.000GB, step: 39900, lr: 0.000100, grad: 16906.2871, loss: 215.4298
+INFO - ncsn_runner.py - 2023-07-29 00:11:21,509 - elapsed: 9:24:07.352, train time: 3.2240, mem: 0.462GB, GPUmem: 10.000GB, step: 40000, lr: 0.000100, grad: 11369.3945, loss: 382.3021
+INFO - ncsn_runner.py - 2023-07-29 00:11:21,548 - Saving checkpoint.pt in youtube_drive\logs
+INFO - ncsn_runner.py - 2023-07-29 00:11:22,709 - elapsed: 9:24:08.552, step: 40000, mem: 0.463GB, GPUmem: 10.000GB, test_loss: 2327.9092
+INFO - ncsn_runner.py - 2023-07-29 00:12:49,119 - elapsed: 9:25:34.961, train time: 3.2329, mem: 0.463GB, GPUmem: 10.000GB, step: 40100, lr: 0.000100, grad: 9920.3984, loss: 993.1162
+INFO - ncsn_runner.py - 2023-07-29 00:14:13,023 - elapsed: 9:26:58.866, train time: 3.2427, mem: 0.463GB, GPUmem: 10.000GB, step: 40200, lr: 0.000100, grad: 17494.6680, loss: 892.2842
+INFO - ncsn_runner.py - 2023-07-29 00:15:37,643 - elapsed: 9:28:23.485, train time: 3.2524, mem: 0.462GB, GPUmem: 10.000GB, step: 40300, lr: 0.000100, grad: 18530.2598, loss: 884.8678
+INFO - ncsn_runner.py - 2023-07-29 00:17:01,331 - elapsed: 9:29:47.173, train time: 3.2612, mem: 0.462GB, GPUmem: 10.000GB, step: 40400, lr: 0.000100, grad: 13690.8916, loss: 908.5443
+INFO - ncsn_runner.py - 2023-07-29 00:18:27,362 - elapsed: 9:31:13.205, train time: 3.2710, mem: 0.462GB, GPUmem: 10.000GB, step: 40500, lr: 0.000100, grad: 21794.9648, loss: 1349.2714
+INFO - ncsn_runner.py - 2023-07-29 00:19:51,860 - elapsed: 9:32:37.702, train time: 3.2806, mem: 0.462GB, GPUmem: 10.000GB, step: 40600, lr: 0.000100, grad: 25931.8164, loss: 292.5376
+INFO - ncsn_runner.py - 2023-07-29 00:21:16,144 - elapsed: 9:34:01.987, train time: 3.2902, mem: 0.462GB, GPUmem: 10.000GB, step: 40700, lr: 0.000100, grad: 13969.9795, loss: 278.7650

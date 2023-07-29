@@ -103,8 +103,15 @@ class RunningAverageMeter(object):
 
 def conditioning_fn(config, X, num_frames_pred=0, prob_mask_cond=0.0, prob_mask_future=0.0, conditional=True):
     imsize = config.data.image_size
+    # square image or not 
+    if config.data.image_height and config.data.image_width:
+        imh, imw = config.data.image_height, config.data.image_width
+    else:
+        imh, imw = imsize, imsize
+    # print('Image Height: ', imh, ' || Image Width: ', imw)
+    
     if not conditional:
-        return X.reshape(len(X), -1, imsize, imsize), None, None
+        return X.reshape(len(X), -1, imh, imw), None, None
 
     cond = config.data.num_frames_cond
     train = config.data.num_frames
@@ -112,10 +119,10 @@ def conditioning_fn(config, X, num_frames_pred=0, prob_mask_cond=0.0, prob_mask_
     future = getattr(config.data, "num_frames_future", 0)
 
     # Frames to train on / sample
-    pred_frames = X[:, cond:cond+pred].reshape(len(X), -1, imsize, imsize)
+    pred_frames = X[:, cond:cond+pred].reshape(len(X), -1, imh, imw)
 
     # Condition (Past)
-    cond_frames = X[:, :cond].reshape(len(X), -1, imsize, imsize)
+    cond_frames = X[:, :cond].reshape(len(X), -1, imh, imw)
 
     if prob_mask_cond > 0.0:
         cond_mask = (torch.rand(X.shape[0], device=X.device) > prob_mask_cond)
@@ -128,10 +135,10 @@ def conditioning_fn(config, X, num_frames_pred=0, prob_mask_cond=0.0, prob_mask_
     if future > 0:
 
         if prob_mask_future == 1.0:
-            future_frames = torch.zeros(len(X), config.data.channels*future, imsize, imsize)
+            future_frames = torch.zeros(len(X), config.data.channels*future, imh, imw)
             # future_mask = torch.zeros(len(X), 1, 1, 1).to(torch.int32) # make 0,1
         else:
-            future_frames = X[:, cond+train:cond+train+future].reshape(len(X), -1, imsize, imsize)
+            future_frames = X[:, cond+train:cond+train+future].reshape(len(X), -1, imh, imw)
             if prob_mask_future > 0.0:
                 if getattr(config.data, "prob_mask_sync", False):
                     future_mask = cond_mask
