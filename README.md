@@ -15,4 +15,5 @@ This is a unofficial reimplementation of the NeurIPS 2022 paper [MCVD: Masked Co
 YouTube Driving Dataset Video Prediction
 * Downloaded Driving Video from Youtube , Train MCVD on these driving video to conduct prediction tasks
 <img width="1358" alt="image" src="https://github.com/fangyuan-ksgk/MCVD/assets/66006349/6095e783-e3ae-4ad1-818c-e9ffb9b50c87">
+
 * MCVD training pipeline completed -- but performance is still less than promising here
