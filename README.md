@@ -1,13 +1,8 @@
-This is a unofficial reimplementation of the NeurIPS 2022 paper [MCVD: Masked Conditional Video Diffusion for Prediction, Generation, and Interpolation](https://arxiv.org/abs/2205.09853). In this paper, we devise a general-purpose model for video prediction (forward and backward), unconditional generation, and interpolation with Masked Conditional Video Diffusion (MCVD) models. Original project page is on [website](https://mask-cond-video-diffusion.github.io/) for more details. 
+Implementation of Mased Connditional Video Diffusion (MCVD) models. Using Denoised Diffusion model to conduct Video Predictionn. 
 
-```bib
-@inproceedings{voleti2022MCVD,
- author = {Voleti, Vikram and Jolicoeur-Martineau, Alexia and Pal, Christopher},
- title = {MCVD: Masked Conditional Video Diffusion for Prediction, Generation, and Interpolation},
- url = {https://arxiv.org/abs/2205.09853},
- booktitle = {(NeurIPS) Advances in Neural Information Processing Systems},
- year = {2022}
-}
+Currently, the model is trained on 20 minutes of scraped Youtube Videos of driving scenes in Tokyo and Kyoto city:
+<img width="732" alt="image" src="https://github.com/fangyuan-ksgk/MCVD/assets/66006349/94a7f1bf-8903-46b3-a51f-515cc879126c">
+The performance seems to be ok, but I feel like there are still bugs inside the codebase, for instance, the color of the predicted pic and the conditional pic are somehow different. 
 
 ```
 
