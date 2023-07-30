@@ -1,4 +1,4 @@
-Implementation of Mased Connditional Video Diffusion (MCVD) models. Using Denoised Diffusion model to conduct Video Predictionn. 
+Implementation of Mased Connditional Video Diffusion (MCVD) models. Using Denoised Diffusion model to conduct Video Prediction.  
 
 Currently, the model is trained on 20 minutes of scraped Youtube Videos of driving scenes in Tokyo and Kyoto city:
 <img width="732" alt="image" src="https://github.com/fangyuan-ksgk/MCVD/assets/66006349/94a7f1bf-8903-46b3-a51f-515cc879126c">
@@ -6,6 +6,8 @@ Currently, the model is trained on 20 minutes of scraped Youtube Videos of drivi
 The performance seems to be ok, but I feel like there are still bugs inside the codebase, for instance, the color of the predicted pic and the conditional pic are somehow different. 
 
 ```
+
+
 
 --- Ongoing: 
 YouTube Driving Dataset Video Prediction
