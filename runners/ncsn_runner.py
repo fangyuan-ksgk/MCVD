@@ -102,14 +102,7 @@ class RunningAverageMeter(object):
 
 
 def conditioning_fn(config, X, num_frames_pred=0, prob_mask_cond=0.0, prob_mask_future=0.0, conditional=True):
-    imsize = config.data.image_size
-    # square image or not 
-    if config.data.image_height and config.data.image_width:
-        imh, imw = config.data.image_height, config.data.image_width
-    else:
-        imh, imw = imsize, imsize
-    # print('Image Height: ', imh, ' || Image Width: ', imw)
-    
+    imh, imw = config.data.image_height, config.data.image_width
     if not conditional:
         return X.reshape(len(X), -1, imh, imw), None, None
 
@@ -154,8 +147,11 @@ def conditioning_fn(config, X, num_frames_pred=0, prob_mask_cond=0.0, prob_mask_
     return pred_frames, cond_frames, cond_mask   # , future_mask
 
 
-def stretch_image(X, ch, imsize):
-    return X.reshape(len(X), -1, ch, imsize, imsize).permute(0, 2, 1, 4, 3).reshape(len(X), ch, -1, imsize).permute(0, 1, 3, 2)
+# def stretch_image(X, ch, imsize):
+    # return X.reshape(len(X), -1, ch, imsize, imsize).permute(0, 2, 1, 4, 3).reshape(len(X), ch, -1, imsize).permute(0, 1, 3, 2)
+
+def stretch_image(X, ch, imh, imw): # (B, NC, H, W) -> (B, C, H, NW)
+    return X.reshape(len(X), -1, ch, imh, imw).permute(0, 2, 1, 4, 3).reshape(len(X), ch, -1, imh).permute(0, 1, 3, 2)
 
 
 # Make and load model
@@ -356,7 +352,7 @@ class NCSNRunner():
 
         # Initial samples
         n_init_samples = min(36, self.config.training.batch_size)
-        init_samples_shape = (n_init_samples, self.config.data.channels*self.config.data.num_frames, self.config.data.image_size, self.config.data.image_size)
+        init_samples_shape = (n_init_samples, self.config.data.channels*self.config.data.num_frames, self.config.data.image_height, self.config.data.image_width)
         if self.version == "SMLD":
             init_samples = torch.rand(init_samples_shape, device=self.config.device)
             init_samples = data_transform(self.config, init_samples)
@@ -620,7 +616,7 @@ class NCSNRunner():
                                           clip_before=getattr(self.config.sampling, 'clip_before', True),
                                           verbose=False, log=False, gamma=getattr(self.config.model, 'gamma', False)).to('cpu')
                     pred = all_samples[-1].reshape(all_samples[-1].shape[0], self.config.data.channels*self.config.data.num_frames,
-                                                   self.config.data.image_size, self.config.data.image_size)
+                                                   self.config.data.image_height, self.config.data.image_width)
                     pred = inverse_data_transform(self.config, pred)
 
                     if conditional:
@@ -673,11 +669,12 @@ class NCSNRunner():
                         del gif_frames
 
                         # Stretch out multiple frames horizontally
-                        pred = stretch_image(pred, self.config.data.channels, self.config.data.image_size)
-                        reali = stretch_image(reali, self.config.data.channels, self.config.data.image_size)
-                        condi = stretch_image(condi, self.config.data.channels, self.config.data.image_size)
+                        
+                        pred = stretch_image(pred, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
+                        reali = stretch_image(reali, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
+                        condi = stretch_image(condi, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
                         if future > 0:
-                            futri = stretch_image(futri, self.config.data.channels, self.config.data.image_size)
+                            futri = stretch_image(futri, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
 
                         padding = 0.5 * torch.ones(len(reali), self.config.data.channels, self.config.data.image_size, 4)
                         if self.config.data.channels == 1:
@@ -696,7 +693,7 @@ class NCSNRunner():
 
                     else:
                         # Stretch out multiple frames horizontally
-                        pred = stretch_image(pred, self.config.data.channels, self.config.data.image_size)
+                        pred = stretch_image(pred, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
                         nrow = ceil(np.sqrt(n_init_samples))
                         image_grid = make_grid(pred, nrow)
 
@@ -919,7 +916,7 @@ class NCSNRunner():
             print(sys.exc_info()[0])
 
     def sample(self):
-        if self.config.sampling.ckpt_id is None:
+        if self.config.sampling.ckpt_id is None or self.config.sampling.ckpt_id == 0:
             ckpt = "latest"
             states = torch.load(os.path.join(self.args.log_path, 'checkpoint.pt'), map_location=self.config.device)
         else:
@@ -971,7 +968,8 @@ class NCSNRunner():
 
                 # init_samples
                 init_samples_shape = (width, width, self.config.data.channels*self.config.data.num_frames,
-                                      self.config.data.image_size, self.config.data.image_size)
+                                      self.config.data.image_height, self.config.data.image_width)
+                                      
                 if self.version == "SMLD":
                     init_samples = torch.rand(init_samples_shape, device=self.config.device)
                     init_samples = data_transform(self.config, init_samples)
@@ -993,7 +991,7 @@ class NCSNRunner():
                 torch.save(refer_images[:width, ...], os.path.join(self.args.image_folder, 'refer_image.pt'))
 
                 # Stretch out multiple frames horizontally
-                refer_images = stretch_image(refer_images, self.config.data.channels, self.config.data.image_size)
+                refer_images = stretch_image(refer_images, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
 
 
                 refer_images = refer_images[:width, None, ...].expand(-1, width, -1, -1, -1).reshape(-1,
@@ -1004,24 +1002,24 @@ class NCSNRunner():
                 if not self.config.sampling.final_only:
                     for i, sample in enumerate(tqdm(all_samples)):
                         sample = sample.reshape(self.config.sampling.batch_size, self.config.data.channels*self.config.data.num_frames,
-                                                self.config.data.image_size, self.config.data.image_size)
+                                                self.config.data.image_height, self.config.data.image_width)
 
                         sample = inverse_data_transform(self.config, sample)
 
                         # Stretch out multiple frames horizontally
-                        sample = stretch_image(sample, self.config.data.channels, self.config.data.image_size)
+                        sample = stretch_image(sample, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
 
                         image_grid = make_grid(sample, ceil(np.sqrt(self.config.sampling.batch_size)))
                         save_image(image_grid, os.path.join(self.args.image_folder, 'image_grid_{}.png'.format(i)))
                         torch.save(sample, os.path.join(self.args.image_folder, 'completion_{}.pt'.format(i)))
                 else:
                     sample = all_samples[-1].reshape(self.config.sampling.batch_size, self.config.data.channels*self.config.data.num_frames,
-                                                     self.config.data.image_size, self.config.data.image_size)
+                                                     self.config.data.image_height, self.config.data.image_width)
 
                     sample = inverse_data_transform(self.config, sample)
 
                     # Stretch out multiple frames horizontally
-                    sample = stretch_image(sample, self.config.data.channels, self.config.data.image_size)
+                    sample = stretch_image(sample, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
 
                     image_grid = make_grid(sample, ceil(np.sqrt(self.config.sampling.batch_size)))
                     save_image(image_grid, os.path.join(self.args.image_folder, 'image_grid_{}.png'.format(ckpt)))
@@ -1038,7 +1036,7 @@ class NCSNRunner():
 
                 # z
                 init_samples_shape = (self.config.sampling.batch_size, self.config.data.channels*self.config.data.num_frames,
-                                      self.config.data.image_size, self.config.data.image_size)
+                                      self.config.data.image_height, self.config.data.image_width)
                 if self.version == "SMLD":
                     z = torch.rand(init_samples_shape, device=self.config.device)
                     z = data_transform(self.config, z)
@@ -1081,7 +1079,7 @@ class NCSNRunner():
                         sample = inverse_data_transform(self.config, sample)
 
                         # Stretch out multiple frames horizontally
-                        sample = stretch_image(sample, self.config.data.channels, self.config.data.image_size)  
+                        sample = stretch_image(sample, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
 
                         image_grid = make_grid(sample, nrow=self.config.sampling.n_interpolations)
                         save_image(image_grid, os.path.join(self.args.image_folder, 'image_grid_{}.png'.format(i)))
@@ -1094,7 +1092,7 @@ class NCSNRunner():
                     sample = inverse_data_transform(self.config, sample)
 
                     # Stretch out multiple frames horizontally
-                    sample = stretch_image(sample, self.config.data.channels, self.config.data.image_size)
+                    sample = stretch_image(sample, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
 
                     image_grid = make_grid(sample, self.config.sampling.n_interpolations)
                     save_image(image_grid, os.path.join(self.args.image_folder, 'image_grid_{}.png'.format(ckpt)))
@@ -1111,7 +1109,7 @@ class NCSNRunner():
 
                 # z
                 init_samples_shape = (self.config.sampling.batch_size, self.config.data.channels*self.config.data.num_frames,
-                                      self.config.data.image_size, self.config.data.image_size)
+                                      self.config.data.image_height, self.config.data.image_width)
                 if self.version == "SMLD":
                     z = torch.rand(init_samples_shape, device=self.config.device)
                     z = data_transform(self.config, z)
@@ -1138,7 +1136,7 @@ class NCSNRunner():
 
                 # Sampler
                 sampler = self.get_sampler()
-
+                print('DBG: init_samples shape: ', init_samples.shape, ' || cond shape: ', cond.shape)
                 all_samples = sampler(init_samples, scorenet, cond=cond, cond_mask=cond_mask,
                                       n_steps_each=self.config.sampling.n_steps_each,
                                       step_lr=self.config.sampling.step_lr, verbose=True,
@@ -1150,7 +1148,7 @@ class NCSNRunner():
 
                 if not self.config.sampling.final_only:
                     for i, sample in tqdm(enumerate(all_samples), total=len(all_samples),
-                                               desc="saving image samples"):
+                                               desc="saving image samples"): # all_samples are the reconstructed prediction frames
                         sample = sample.reshape(sample.shape[0], self.config.data.channels,
                                              self.config.data.image_size,
                                              self.config.data.image_size)
@@ -1158,39 +1156,42 @@ class NCSNRunner():
                         sample = inverse_data_transform(self.config, sample)
 
                         # Stretch out multiple frames horizontally
-                        sample = stretch_image(sample, self.config.data.channels, self.config.data.image_size)
+                        sample = stretch_image(sample, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
 
                         nrow = ceil(np.sqrt(self.config.data.num_frames*self.config.sampling.batch_size)/self.config.data.num_frames)
                         image_grid = make_grid(sample, nrow, pad_value=0.5)
+                        print('--- 1163 --- Saving Image Grid of sample shape: ', sample.shape)
                         save_image(image_grid, os.path.join(self.args.image_folder, 'image_grid_{:04d}.png'.format(i)))
                         torch.save(sample, os.path.join(self.args.image_folder, 'samples_{:04d}.pt'.format(i)))
 
                 else:
                     sample = all_samples[-1].reshape(all_samples[-1].shape[0], self.config.data.channels*self.config.data.num_frames,
-                                                  self.config.data.image_size, self.config.data.image_size)
+                                                  self.config.data.image_height, self.config.data.image_width)
 
                     sample = inverse_data_transform(self.config, sample)
 
                     # Stretch out multiple frames horizontally
-                    sample = stretch_image(sample, self.config.data.channels, self.config.data.image_size)
+                    sample = stretch_image(sample, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
 
                     nrow = ceil(np.sqrt(self.config.data.num_frames*self.config.sampling.batch_size)/self.config.data.num_frames)
                     image_grid = make_grid(sample, nrow, pad_value=0.5)
+                    print('--- 1178 --- Saving Image Grid of sample shape: ', sample.shape, ' | CKPT: ', ckpt)
                     save_image(image_grid, os.path.join(self.args.image_folder, 'image_grid_{}.png'.format(ckpt)))
                     torch.save(sample, os.path.join(self.args.image_folder, 'samples_{}.pt'.format(ckpt)))
 
                 if conditional:
                     real, cond = real.to('cpu'), cond.to('cpu')
-                    real = stretch_image(inverse_data_transform(self.config, real), self.config.data.channels, self.config.data.image_size)
+                    real = stretch_image(inverse_data_transform(self.config, real), self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
                     if future > 0:
                         cond, futr = torch.tensor_split(cond, (self.config.data.num_frames_cond*self.config.data.channels,), dim=1)
-                        futr = stretch_image(inverse_data_transform(self.config, futr), self.config.data.channels, self.config.data.image_size)
-                    cond = stretch_image(inverse_data_transform(self.config, cond), self.config.data.channels, self.config.data.image_size)
+                        futr = stretch_image(inverse_data_transform(self.config, futr), self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
+                    cond = stretch_image(inverse_data_transform(self.config, cond), self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
                     padding = 0.5*torch.ones(len(real), self.config.data.channels, self.config.data.image_size, 2)
                     nrow = ceil(np.sqrt((self.config.data.num_frames_cond+self.config.data.num_frames*2+future)*self.config.sampling.batch_size)/(self.config.data.num_frames_cond+self.config.data.num_frames*2+future))
                     image_grid = make_grid(torch.cat(
                         [cond, padding, real, padding, sample] if future == 0 else [cond, padding, real, padding, sample, futr],
                             dim=-1), nrow=nrow, padding=6, pad_value=0.5)
+                    print('--- 1194 --- Saving Image Grid || cond shape: ', cond.shape, ' | real shape: ', real.shape, ' | sample shape: ', sample.shape, ' | padding shape: ', padding.shape,' | future: ', future, ' | image_grid shape: ', image_grid.shape, ' | CKPT: ', ckpt)
                     save_image(image_grid, os.path.join(self.args.image_folder, 'image_full_grid_{}.png'.format(ckpt)))
                     torch.save(sample, os.path.join(self.args.image_folder, 'samples_full_{}.pt'.format(ckpt)))
 
@@ -1223,7 +1224,7 @@ class NCSNRunner():
             for i in tqdm(range(n_rounds), desc='Generating samples for FID'):
 
                 init_samples_shape = (self.config.sampling.batch_size, self.config.data.channels*self.config.data.num_frames,
-                                      self.config.data.image_size, self.config.data.image_size)
+                                      self.config.data.image_height, self.config.data.image_width)
                 # z
                 if self.version == "SMLD":
                     z = torch.rand(init_samples_shape, device=self.config.device)
@@ -1280,7 +1281,7 @@ class NCSNRunner():
                                       log=True, gamma=getattr(self.config.model, 'gamma', False)).to('cpu')
 
                 final_samples = all_samples[-1].reshape(all_samples[-1].shape[0], self.config.data.channels*self.config.data.num_frames,
-                                                        self.config.data.image_size, self.config.data.image_size)
+                                                        self.config.data.image_height, self.config.data.image_width)
                 final_samples = inverse_data_transform(self.config, final_samples)
                 gen_samples = final_samples if i == 0 else torch.cat([gen_samples, final_samples], dim=0)
 
@@ -1301,7 +1302,7 @@ class NCSNRunner():
 
             # Save samples
             # Stretch out multiple frames horizontally
-            gen_samples_to_save = stretch_image(gen_samples[:self.config.sampling.batch_size], self.config.data.channels, self.config.data.image_size)
+            gen_samples_to_save = stretch_image(gen_samples[:self.config.sampling.batch_size], self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
             nrow = ceil(np.sqrt(self.config.data.num_frames*self.config.sampling.batch_size)/self.config.data.num_frames)
             image_grid = make_grid(gen_samples_to_save, nrow, pad_value=0.5)
             save_image(image_grid, os.path.join(self.args.image_folder, 'image_grid_{}.png'.format(ckpt)))
@@ -1470,7 +1471,7 @@ class NCSNRunner():
 
             # z
             init_samples_shape = (real.shape[0], self.config.data.channels*self.config.data.num_frames,
-                                  self.config.data.image_size, self.config.data.image_size)
+                                  self.config.data.image_height, self.config.data.image_width)
             if self.version == "SMLD":
                 z = torch.rand(init_samples_shape, device=self.config.device)
                 z = data_transform(self.config, z)
@@ -1526,7 +1527,7 @@ class NCSNRunner():
                                       t_min=getattr(self.config.sampling, 'init_prev_t', -1), log=True if not train else False,
                                       gamma=getattr(self.config.model, 'gamma', False))
                 gen_samples = gen_samples[-1].reshape(gen_samples[-1].shape[0], self.config.data.channels*self.config.data.num_frames,
-                                                      self.config.data.image_size, self.config.data.image_size)
+                                                      self.config.data.image_height, self.config.data.image_width)
                 pred_samples.append(gen_samples.to('cpu'))
 
                 if i_frame == n_iter_frames - 1:
@@ -1637,7 +1638,7 @@ class NCSNRunner():
 
                 # z
                 init_samples_shape = (real.shape[0], self.config.data.channels*self.config.data.num_frames,
-                                      self.config.data.image_size, self.config.data.image_size)
+                                      self.config.data.image_height, self.config.data.image_width)
                 if self.version == "SMLD":
                     z = torch.rand(init_samples_shape, device=self.config.device)
                     z = data_transform(self.config, z)
@@ -1693,7 +1694,7 @@ class NCSNRunner():
                                           t_min=getattr(self.config.sampling, 'init_prev_t', -1), log=True if not train else False,
                                           gamma=getattr(self.config.model, 'gamma', False))
                     gen_samples = gen_samples[-1].reshape(gen_samples[-1].shape[0], self.config.data.channels*self.config.data.num_frames,
-                                                          self.config.data.image_size, self.config.data.image_size)
+                                                          self.config.data.image_height, self.config.data.image_width)
                     pred_samples.append(gen_samples.to('cpu'))
 
                     if i_frame == n_iter_frames - 1:
@@ -1808,7 +1809,7 @@ class NCSNRunner():
 
                     # z
                     init_samples_shape = (cond_fvd.shape[0], self.config.data.channels*self.config.data.num_frames,
-                                          self.config.data.image_size, self.config.data.image_size)
+                                          self.config.data.image_height, self.config.data.image_width)
                     if self.version == "SMLD":
                         z = torch.rand(init_samples_shape, device=self.config.device)
                         z = data_transform(self.config, z)
@@ -1862,7 +1863,7 @@ class NCSNRunner():
                                               t_min=getattr(self.config.sampling, 'init_prev_t', -1), log=True if not train else False,
                                               gamma=getattr(self.config.model, 'gamma', False))
                         gen_samples = gen_samples[-1].reshape(gen_samples[-1].shape[0], self.config.data.channels*self.config.data.num_frames,
-                                                              self.config.data.image_size, self.config.data.image_size)
+                                                              self.config.data.image_height, self.config.data.image_width)
                         pred_samples.append(gen_samples.to('cpu'))
 
                         if i_frame == n_iter_frames - 1:
@@ -1923,7 +1924,7 @@ class NCSNRunner():
                     pred_uncond = inverse_data_transform(self.config, pred_uncond)
 
                 def to_i3d(x):
-                    x = x.reshape(x.shape[0], -1, self.config.data.channels, self.config.data.image_size, self.config.data.image_size)
+                    x = x.reshape(x.shape[0], -1, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
                     if self.config.data.channels == 1:
                         x = x.repeat(1, 1, 3, 1, 1) # hack for greyscale images
                     x = x.permute(0, 2, 1, 3, 4)  # BTCHW -> BCTHW
@@ -2117,9 +2118,9 @@ class NCSNRunner():
                     else:
                         torch.save({"cond": cond, "pred": pred, "real": real},
                                    os.path.join(self.args.video_folder, f"videos_pred_{ckpt}.pt"))
-                    cond_im = stretch_image(cond, self.config.data.channels, self.config.data.image_size)
-                    pred_im = stretch_image(pred, self.config.data.channels, self.config.data.image_size)
-                    real_im = stretch_image(real, self.config.data.channels, self.config.data.image_size)
+                    cond_im = stretch_image(cond, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
+                    pred_im = stretch_image(pred, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
+                    real_im = stretch_image(real, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
                     padding_hor = 0.5*torch.ones(*real_im.shape[:-1], 2)
                     real_data = torch.cat([cond_im, padding_hor, real_im], dim=-1)
                     pred_data = torch.cat([0.5*torch.ones_like(cond_im), padding_hor, pred_im], dim=-1)
@@ -2140,10 +2141,10 @@ class NCSNRunner():
                     else:
                         torch.save({"cond": cond, "pred": pred, "real": real, "futr": futr},
                                    os.path.join(self.args.video_folder, f"videos_interp_{ckpt}.pt"))
-                    cond_im = stretch_image(cond, self.config.data.channels, self.config.data.image_size)
-                    pred_im = stretch_image(pred, self.config.data.channels, self.config.data.image_size)
-                    real_im = stretch_image(real, self.config.data.channels, self.config.data.image_size)
-                    futr_im = stretch_image(futr, self.config.data.channels, self.config.data.image_size)
+                    cond_im = stretch_image(cond, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
+                    pred_im = stretch_image(pred, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
+                    real_im = stretch_image(real, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
+                    futr_im = stretch_image(futr, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
                     padding_hor = 0.5*torch.ones(*real_im.shape[:-1], 2)
                     real_data = torch.cat([cond_im, padding_hor, real_im, padding_hor, futr_im], dim=-1)
                     pred_data = torch.cat([0.5*torch.ones_like(cond_im), padding_hor, pred_im, padding_hor, 0.5*torch.ones_like(futr_im)], dim=-1)
@@ -2164,7 +2165,7 @@ class NCSNRunner():
                         torch.save({"gen": pred}, os.path.join(self.args.log_sample_path, f"videos_gen_{ckpt}.pt"))
                     else:
                         torch.save({"gen": pred}, os.path.join(self.args.video_folder, f"videos_gen_{ckpt}.pt"))
-                    data = stretch_image(pred, self.config.data.channels, self.config.data.image_size)
+                    data = stretch_image(pred, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
                     # Save
                     nrow = ceil(np.sqrt((self.config.data.num_frames_cond+self.config.sampling.num_frames_pred)*pred.shape[0])/(self.config.data.num_frames_cond+self.config.sampling.num_frames_pred))
                     image_grid = make_grid(data, nrow=nrow, padding=6, pad_value=0.5)
@@ -2513,7 +2514,7 @@ class NCSNRunner():
 
                     # z
                     init_samples_shape = (self.config.fast_fid.batch_size, self.config.data.channels*self.config.data.num_frames,
-                                          self.config.data.image_size, self.config.data.image_size)
+                                          self.config.data.image_height, self.config.data.image_width)
                     if self.version == "SMLD":
                         z = torch.rand(init_samples_shape, device=self.config.device)
                         z = data_transform(self.config, z)
@@ -2550,12 +2551,12 @@ class NCSNRunner():
                                           gamma=getattr(self.config.model, 'gamma', False)).to('cpu')
 
                     final_samples = all_samples[-1].reshape(all_samples[-1].shape[0], self.config.data.channels*self.config.data.num_frames,
-                                                            self.config.data.image_size, self.config.data.image_size)
+                                                            self.config.data.image_height, self.config.data.image_width)
                     final_samples = inverse_data_transform(self.config, final_samples)
                     gen_samples = final_samples if i == 0 else torch.cat([gen_samples, final_samples], dim=0)
 
                 # Expand it out
-                gen_samples = gen_samples.reshape(-1, self.config.data.channels, self.config.data.image_size, self.config.data.image_size)
+                gen_samples = gen_samples.reshape(-1, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
 
                 # Save samples
                 torch.save(gen_samples, os.path.join(self.args.image_folder, 'samples_{}.pt'.format(ckpt)))
@@ -2639,7 +2640,7 @@ class NCSNRunner():
 
                 # z
                 init_samples_shape = (self.config.fast_fid.batch_size, self.config.data.channels*self.config.data.num_frames,
-                                      self.config.data.image_size, self.config.data.image_size)
+                                      self.config.data.image_height, self.config.data.image_width)
                 if self.version == "SMLD":
                     z = torch.rand(init_samples_shape, device=self.config.device)
                     z = data_transform(self.config, z)
@@ -2678,7 +2679,7 @@ class NCSNRunner():
                 final_samples = inverse_data_transform(self.config, all_samples[-1])
 
                 # Expand it out
-                final_samples = final_samples.reshape(-1, self.config.data.channels, self.config.data.image_size, self.config.data.image_size)
+                final_samples = final_samples.reshape(-1, self.config.data.channels, self.config.data.image_height, self.config.data.image_width)
 
             # FID
             if self.args.no_pr:

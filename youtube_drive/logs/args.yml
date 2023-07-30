@@ -8,12 +8,12 @@ data_path: D:/Implementation/VD/data/drive
 end_ckpt: null
 exp: youtube_drive
 fast_fid: false
-feats_dir: D:\Implementation\VD\mcvd-pytorch\datasets
+feats_dir: D:/Implementation/VD/mcvd-pytorch/datasets
 fid_batch_size: 1000
 fid_num_samples: null
 final_only: null
 freq: null
-image_folder: images
+image_folder: D:/Implementation/VD/mcvd-pytorch/images
 interact: false
 log_path: youtube_drive\logs
 ni: true
@@ -24,10 +24,10 @@ resume_training: false
 sample: false
 seed: 1234
 start_at: 0
-stats_dir: D:\Implementation\VD\mcvd-pytorch\datasets
+stats_dir: D:/Implementation/VD/mcvd-pytorch/datasets
 stats_download: false
 subsample: null
 test: false
 verbose: info
-video_folder: videos
+video_folder: D:/Implementation/VD/mcvd-pytorch/videos
 video_gen: false
